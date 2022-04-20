@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
-.bg-image {
-    background-image: url(./images/bg1.jpg);
+.header {
+    background-image: url(../images/bg1.jpg);
+    background-size: cover;
 }
