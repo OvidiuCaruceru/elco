@@ -1,7 +1,30 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@500;600&family=Roboto:wght@400;700;900&display=swap');
 
+/* Custom propreties */
+:root {
+    --dark-text-color: #fff;
+    --light-text-color: #fff;
+    --text-bg-color: #fff;
+    --filter-color-hero: #fff;
+    --filter-color-secondary: #fff;
+    --button-color: #fff;
+    --hover-color: #fff;
+    --font-family: 'Asap', sans-serif;
+    --font-size-s: 1.6rem;
+    --font-size-m: 2.4rem;
+    --font-size-l: 3rem;
+    --font-size-xl: 4rem;
+}
+
+/* Resets */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    /* font-size: 10px; */
+    font-size: 62.5%;
 }
