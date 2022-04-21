@@ -6,3 +6,10 @@
     box-sizing: border-box;
 }
 
+.svg-header {
+    width: 2rem;
+}
+
+svg {
+    width: inherit;
+}
