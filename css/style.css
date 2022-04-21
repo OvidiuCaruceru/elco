@@ -3,12 +3,12 @@
 
 /* Custom propreties */
 :root {
-    --dark-text-color: #fff;
-    --light-text-color: #fff;
-    --text-bg-color: #fff;
-    --filter-color-hero: #fff;
-    --filter-color-secondary: #fff;
-    --button-color: #fff;
+    --dark-text-color: rgba(0, 0, 0, 100%);
+    --light-text-color: rgba(255, 255, 255, 100%);
+    --text-bg-color: rgba(255, 255, 255, 80%);
+    --filter-color-hero: rgba(205, 255, 252, 31%);;
+    --filter-color-secondary: rgba(232, 250, 255, 96%);
+    --button-color: rgba(47, 150, 255, 100%);
     --hover-color: #fff;
     --font-family: 'Asap', sans-serif;
     --font-size-s: 1.6rem;
@@ -29,6 +29,11 @@
 html {
     /* font-size: 10px; */
     font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-m);
 }
 
 .svg {
