@@ -43,3 +43,11 @@ body {
 .icon {
     width: var(--icon-size);
 }
+
+.bg-hero {
+    background: var(--filter-color-hero) url(../images/bg1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: bottom center;
+}
