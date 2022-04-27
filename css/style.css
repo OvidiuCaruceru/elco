@@ -60,3 +60,20 @@ body {
     background-position: center;
     background-blend-mode: overlay;
 }
+
+.bg-text {
+    background-color: red;
+    border-radius: 1.5rem 0 0 1rem;
+    float: right;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    max-width: 70%;
+}
