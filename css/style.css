@@ -50,6 +50,43 @@ body {
     height: 100vh;
     background-position: bottom center;
     background-blend-mode: overlay;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: .1fr 1fr;
+    grid-template-areas:
+        "...    nav     nav     nav     nav"
+        "...    main    main    main    main"
+    ;
+}
+
+.header,
+.nav-bar,
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+    padding: 0 1rem;
+}
+
+.header {
+    grid-area: nav;
+    background-color: red;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+
+
+.hero-section {
+    grid-area: main;
+    background-color: yellow;
 }
 
 .bg-secondary {
@@ -60,19 +97,3 @@ body {
     background-blend-mode: overlay;
 }
 
-.bg-text {
-    background-color: red;
-    border-radius: 1.5rem 0 0 1rem;
-    float: right;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.header {
-    max-width: 70%;
-}
