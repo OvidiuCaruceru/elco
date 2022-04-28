@@ -44,8 +44,7 @@ body {
     width: var(--icon-size);
 }
 
-.bg-hero,
-.bg-secondary {
+.bg-hero {
     background: var(--filter-color-hero) url(../images/bg1.jpg);
     background-size: cover;
     height: 100vh;
