@@ -75,6 +75,10 @@ li {
     padding: 0 1rem;
 }
 
+.hide-desktop {
+    display: none;
+}
+
 .header {
     grid-area: nav;
     background-color: red;
@@ -101,4 +105,6 @@ li {
     background-position: center;
     background-blend-mode: overlay;
 }
+
+
 
