@@ -82,11 +82,16 @@ li {
     padding: 0 2rem;
 }
 
+.hero-section h1,
+.hero-section h3 {
+    width: 65%;
+}
 
 
 .hero-section {
     grid-area: main;
     background-color: yellow;
+    padding: 0 2rem;
 }
 
 .bg-secondary {
