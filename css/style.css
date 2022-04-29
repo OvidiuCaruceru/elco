@@ -64,6 +64,14 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
+;
+}
+
+.nav-links {
+    position: absolute;
+    right: 28.5%;
+    font-size: var(--font-size-s);
+    border-right: .1rem solid var(--dark-text-color);
 }
 
 a {
@@ -80,6 +88,7 @@ li {
 }
 
 .header {
+    /* position: fixed; */
     grid-area: nav;
     background-color: red;
     justify-content: space-between;
@@ -89,6 +98,7 @@ li {
 .hero-section h1,
 .hero-section h3 {
     width: 65%;
+    border-right: .1rem solid var(--dark-text-color);
 }
 
 
