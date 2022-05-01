@@ -11,9 +11,9 @@
     --button-color: rgba(47, 150, 255, 100%);
     --hover-color: #fff;
     --font-family: 'Asap', sans-serif;
-    --font-size-s: 1.6rem;
-    --font-size-m: 2.4rem;
-    --font-size-l: 3rem;
+    --font-size-s: 1.2rem;
+    --font-size-m: 1.6rem;
+    --font-size-l: 2.4rem;
     --font-size-xl: 4rem;
     --logo-size: 6rem;
     --icon-size: 3rem;
@@ -24,6 +24,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+    padding: 0 1rem;
 }
 
 html {
@@ -44,19 +53,20 @@ body {
     width: var(--icon-size);
 }
 
-.bg-hero {
+.hero-bg {
     background: var(--filter-color-hero) url(../images/bg1.jpg);
     background-size: cover;
     height: 100vh;
     background-position: bottom center;
     background-blend-mode: overlay;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: .1fr 1fr;
-    grid-template-areas:
-        "...    nav     nav     nav     nav"
-        "...    main    main    main    main"
-    ;
+}
+
+.secondary.bg {
+    background: var(--filter-color-secondary) url(../images/bg2.jpg);
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    background-blend-mode: overlay;
 }
 
 .header,
@@ -64,23 +74,6 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
-;
-}
-
-.nav-links {
-    position: absolute;
-    right: 28.5%;
-    font-size: var(--font-size-s);
-    border-right: .1rem solid var(--dark-text-color);
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style-type: none;
-    padding: 0 1rem;
 }
 
 .hide-desktop {
@@ -88,33 +81,12 @@ li {
 }
 
 .header {
-    /* position: fixed; */
-    grid-area: nav;
-    background-color: red;
+    position: fixed;
     justify-content: space-between;
     padding: 0 2rem;
 }
 
-.hero-section h1,
-.hero-section h3 {
-    width: 65%;
-    border-right: .1rem solid var(--dark-text-color);
-}
 
-
-.hero-section {
-    grid-area: main;
-    background-color: yellow;
-    padding: 0 2rem;
-}
-
-.bg-secondary {
-    background: var(--filter-color-secondary) url(../images/bg2.jpg);
-    background-size: cover;
-    height: 100%;
-    background-position: center;
-    background-blend-mode: overlay;
-}
 
 
 
