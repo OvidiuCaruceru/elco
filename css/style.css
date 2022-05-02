@@ -1,11 +1,12 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500;600&family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap');
 
 /* Custom propreties */
 :root {
     --dark-text-color: rgba(0, 0, 0, 1);
     --light-text-color: rgba(255, 255, 255, 1);
-    --text-bg-color: rgba(255, 255, 255, .8);
+    --border-color: rgba(0, 0, 0, .3);
+    --text-bg-color: rgba(255, 255, 255, .92);
     --filter-color-hero: rgba(109, 166, 170, 0.534);
     --filter-color-secondary: rgba(232, 250, 255, .96);
     --button-color: rgba(47, 150, 255, 1);
@@ -14,7 +15,6 @@
     --font-size-s: 1.6rem;
     --font-size-m: 2rem;
     --font-size-l: 4rem;
-    --font-size-xl: 5rem;
     --logo-size: 7rem;
     --icon-size: 3rem;
     --padding-content-text: 5rem 8rem 5rem 5rem;
@@ -45,6 +45,7 @@ html {
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-m);
+    font-weight: 400;
 }
 
 .svg {
@@ -97,7 +98,7 @@ body {
 }
 
 .nav-links li {
-    padding: 0 2rem;
+    padding: 0 1rem;
     font-size: var(--font-size-s);
 }
 
@@ -120,6 +121,18 @@ body {
     box-shadow: 0 .2rem .2em .2rem rgba(165, 165, 165, 0.2);
 }
 
+.text-bg::after { /* this is the vertical border on the text background */
+    position: absolute;
+    display: inline-block;
+    content: '';
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: var(--border-color);
+    height: 70%;
+    width: 1px;
+}
+
 .header.text-bg::before {  /* makes top left corner of nav-bar 90degress not rounded*/
     border-radius: 0 0 0 1.5rem;
 }
@@ -131,11 +144,17 @@ body {
 .main-title {
     font-size: var(--font-size-l);
     line-height: 6rem;
-    padding: var(--padding-content-text);
+    padding: 5rem 15rem 5rem 3rem;
 }
 
-.side-text {
-    font-size: var(--font-size-xl);
+.main-title span {
+    position: absolute;
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    top: 50%;
+    right: -3%;
+    transform: translateY(-50%) rotate(-90deg);
 }
 
 .content {
