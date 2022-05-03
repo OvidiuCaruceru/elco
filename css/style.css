@@ -14,10 +14,14 @@
     --font-family: 'Asap', sans-serif;
     --font-size-s: 1.6rem;
     --font-size-m: 2rem;
-    --font-size-l: 4rem;
+    --font-size-l: 3rem;
+    --font-size-xl: 4rem;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
     --logo-size: 7rem;
     --icon-size: 3rem;
     --padding-content-text: 5rem 8rem 5rem 5rem;
+    --padding-title-text: 2rem 0 2rem 3rem;
     --margin-content-text: 4rem 0;
 }
 
@@ -28,13 +32,10 @@
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style-type: none;
-    padding: 0 1rem;
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-regular);
 }
 
 html {
@@ -42,10 +43,14 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    font-family: var(--font-family);
-    font-size: var(--font-size-m);
-    font-weight: 400;
+a {
+    text-decoration: none;
+    color: var(--dark-text-color);
+}
+
+li {
+    list-style-type: none;
+    padding: 0 1rem;
 }
 
 .svg {
@@ -73,7 +78,8 @@ body {
     background-blend-mode: overlay;
 }
 
-.hero-container {
+.hero-container,
+.secondary-container {
     display: flex;
     flex-direction: column;
     padding: 0 20%;
@@ -142,26 +148,34 @@ body {
 }
 
 .main-title {
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-xl);
     line-height: 6rem;
     padding: 5rem 15rem 5rem 3rem;
+    font-weight: 400; /* Adding this specifically, for some reason the font weight defined in body does not cascade here  */
 }
 
 .main-title span {
     position: absolute;
     display: block;
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     top: 50%;
     right: -3%;
     transform: translateY(-50%) rotate(-90deg);
+}
+
+.title {
+    font-size: var(--font-size-l);
+    padding: var(--padding-title-text);
+    font-weight: 400; /* Adding this specifically, for some reason the font weight defined in body does not cascade here  */
 }
 
 .content {
     font-size: var(--font-size-m);
     line-height: 3rem;
     padding: var(--padding-content-text);
-    margin: var(--margin-content-text)
+    margin: var(--margin-content-text);
+    font-weight: 400; /* Adding this specifically, for some reason the font weight defined in body does not cascade here  */
 }
 
 
