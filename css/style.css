@@ -8,9 +8,8 @@
     --border-color: rgba(0, 0, 0, .3);
     --text-bg-color: rgba(255, 255, 255, .92);
     --filter-color-hero: rgba(109, 166, 170, 0.534);
-    --filter-color-secondary: rgba(232, 250, 255, .96);
-    --button-color: rgba(47, 150, 255, 1);
-    --hover-color: #fff;
+    --filter-color-secondary: rgba(204, 244, 255, 0.96);
+    --button-color: rgb(22, 55, 241);
     --font-family: 'Asap', sans-serif;
     --font-size-s: 1.6rem;
     --font-size-m: 2rem;
@@ -45,7 +44,7 @@ html {
 
 a {
     text-decoration: none;
-    color: var(--dark-text-color);
+    color: inherit;
 }
 
 li {
@@ -76,6 +75,7 @@ li {
     height: 100%;
     background-position: center;
     background-blend-mode: overlay;
+    overflow: hidden; /*  prevents the text-bg::after element from causing side scroll  */
 }
 
 .hero-container,
@@ -109,8 +109,9 @@ li {
 }
 
 .nav-links li:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     color: var(--button-color);
+    transition: color .05s ease, transform .05s;
 }
 
 .text-bg {
