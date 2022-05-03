@@ -108,6 +108,11 @@ li {
     font-size: var(--font-size-s);
 }
 
+.nav-links li:hover {
+    transform: scale(1.2);
+    color: var(--button-color);
+}
+
 .text-bg {
     position: relative;
     z-index: 0;
@@ -167,6 +172,7 @@ li {
 .title {
     font-size: var(--font-size-l);
     padding: var(--padding-title-text);
+    margin: 1rem 0;
     font-weight: 400; /* Adding this specifically, for some reason the font weight defined in body does not cascade here  */
 }
 
