@@ -185,6 +185,18 @@ li {
     font-weight: 400; /* Adding this specifically, for some reason the font weight defined in body does not cascade here  */
 }
 
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.certif-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+
 
 
 
