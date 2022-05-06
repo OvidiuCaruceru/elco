@@ -10,7 +10,7 @@
     --filter-color-hero: rgba(155, 220, 224, 0.534);
     --filter-color-secondary: rgba(200, 248, 255, .99);
     /* --filter-color-secondary: rgb(184, 241, 255); */
-    --button-color: rgb(22, 55, 241);
+    --button-color: rgb(0, 87, 19);
     --font-family: 'Asap', sans-serif;
     --font-size-s: 1.6rem;
     --font-size-m: 2rem;
@@ -216,8 +216,9 @@ li {
 footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 2rem 0;
 }
 
 footer.text-bg::before {
@@ -226,17 +227,23 @@ footer.text-bg::before {
 
 .contact {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .contact-details {
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex: 33%;
+    padding: 2rem 0;
 }
 
 .contact-details > * {
     margin: 0 1rem;
+}
+
+.copyright {
+    font-size: 1rem;
 }
 
 
