@@ -9,7 +9,7 @@
     --text-bg-color: rgba(255, 255, 255, .92);
     --filter-color-hero: rgba(155, 220, 224, 0.534);
     --filter-color-secondary: rgba(200, 248, 255, .99);
-    /* --filter-color-secondary: rgb(184, 241, 255); */
+    --filter-color-other: rgba(200, 255, 252, 0.8);;
     --button-color: rgb(0, 87, 19);
     --font-family: 'Asap', sans-serif;
     --font-size-s: 1.6rem;
@@ -55,6 +55,10 @@ li {
     padding: 0 1rem;
 }
 
+button {
+    border: none;
+}
+
 .svg {
     width: var(--logo-size);
     color: var(--dark-text-color);
@@ -83,6 +87,14 @@ li {
     overflow: hidden; /* prevents the text-bg::after element from causing side scroll  */
 }
 
+.activitate-bg {
+    background: var(--filter-color-other) url(../images/bg3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: lighten;
+}
+
+.container,
 .hero-container,
 .secondary-container {
     display: flex;
@@ -154,8 +166,9 @@ li {
     border-radius: 0 0 0 1.5rem;
 }
 
-.hero-section {
+.main-section {
     margin: 15% 0 0 0;
+    height: 100vh;
 }
 
 .main-title {
