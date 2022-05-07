@@ -10,7 +10,7 @@
     --filter-color-hero: rgba(155, 220, 224, 0.534);
     --filter-color-secondary: rgba(200, 248, 255, .99);
     --filter-color-other: rgba(200, 255, 252, 0.8);;
-    --button-color: rgb(0, 87, 19);
+    --button-color: rgb(0, 131, 131);
     --font-family: 'Asap', sans-serif;
     --font-size-s: 1.6rem;
     --font-size-m: 2rem;
@@ -48,11 +48,6 @@ html {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-li {
-    list-style-type: none;
-    padding: 0 1rem;
 }
 
 button {
@@ -121,6 +116,7 @@ button {
 }
 
 .nav-links li {
+    list-style: none;
     padding: 0 1rem;
     font-size: var(--font-size-s);
 }
@@ -224,6 +220,32 @@ button {
 .map {
     width: 100%;
     padding: 2rem;
+}
+
+.act-section {
+    margin-bottom: 20rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20rem 0;
+}
+
+.btn {
+    color: var(--light-text-color);
+    background-color: var(--button-color);
+    font-size: var(--font-size-m);
+    padding: 2rem 3rem;
+    flex: 30%;
+    border-radius: 2rem;
+}
+
+.list {
+    font-size: var(--font-size-s);
+    list-style-type: disc;
+    line-height: 4rem;
 }
 
 footer {
