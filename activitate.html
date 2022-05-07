@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-	<div class="container activitate-bg">
+	<div class="container activitate-bg" id="container">
         <header class="header text-bg">
             <a href="index.html"><img class="svg" src="./images/logo.svg" alt="ELCO logo"></a>
 
@@ -41,31 +41,25 @@
             </section>
 
 			<div class="buttons">
-				<a href="#">
-					<button class="btn">
-						<h4>Proiectare și execuție</h4>
-					</button>
+				<a href="#pro">
+					<button class="btn">Proiectare și execuție</button>
 				</a>
 
-				<a href="#">
-					<button class="btn">
-						<h4>Măsurători și verificări periodice</h4>
-					</button>
+				<a href="#mas">
+					<button class="btn">Măsurători și verificări periodice</button>
 				</a>
 
-				<a href="#">
-					<button class="btn">
-						<h4>Instalații de curenți slabi</h4>
-					</button>
+				<a href="#ins">
+					<button class="btn">Instalații de curenți slabi</button>
 				</a>
 			</div>
         </main>
 
-		<section id="pro">
+		<section class="act-section" id="pro">
 			<h2 class="title text-bg">
 				Proiectare și execuție
 			</h2>
-			<ul class="list text-bg">
+			<ul class="list content text-bg">
 				<li>Instalații de iluminat și distribuție electrică</li>
 				<li>Instalații de paratrăsnet și împământare</li>
 				<li>Tablouri electrice de distribuție și comandă</li>
@@ -74,11 +68,11 @@
 			</ul>
 		</section>
 
-		<section id="mas">
+		<section class="act-section" id="mas">
 			<h2 class="title text-bg">
 				Măsurători și verificări periodice
 			</h2>
-			<ul class="list text-bg">
+			<ul class="list content text-bg">
 				<li>Verificare prize de împământare și rețea de egalizare potențiale</li>
 				<li>Verificare instalație paratrăznet</li>
 				<li>Verificare izolație cabluri &#40;test până 5000V&#41;</li>
@@ -88,17 +82,23 @@
 			</ul>
 		</section>
 
-		<section id="ins">
+		<section class="act-section" id="ins">
 			<h2 class="title text-bg">
 				Instalații de curenți slabi
 			</h2>
-			<ul class="list text-bg">
+			<ul class="list content text-bg">
 				<li>Sisteme de securitate anti efracție</li>
 				<li>Rețele de Voce Date &#40;incl. rețele optice&#41;</li>
 				<li>Sisteme de securitate la incendiu</li>
 				<li>Sisteme de supraveghere și control acces</li>
 			</ul>
 		</section>
+
+		<a href="#container">
+			<button>
+				<img src="./images/arrow.svg" alt="arrow up">
+			</button>
+		</a>
 
 		<footer class="text-bg">
             <div class="contact">
