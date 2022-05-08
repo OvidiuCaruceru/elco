@@ -9,7 +9,7 @@
     --text-bg-color: rgba(255, 255, 255, .92);
     --filter-color-hero: rgba(155, 220, 224, 0.534);
     --filter-color-secondary: rgba(200, 248, 255, .99);
-    --filter-color-other: rgba(200, 255, 252, 0.8);;
+    --filter-color-other: rgba(200, 255, 252, 0.8);
     --button-color: rgb(0, 131, 131);
     --font-family: 'Asap', sans-serif;
     --font-size-s: 1.6rem;
@@ -87,6 +87,7 @@ button {
     background-size: cover;
     background-position: center;
     background-blend-mode: lighten;
+    overflow: hidden; /* prevents the text-bg::after element from causing side scroll  */
 }
 
 .container,
@@ -95,6 +96,7 @@ button {
     display: flex;
     flex-direction: column;
     padding: 0 20%;
+    position: relative;
 }
 
 .header {
@@ -102,6 +104,7 @@ button {
     justify-content: space-between;
     padding: 1.2rem 4rem;
     width: 100%;
+    top: 0;
 }
 
 .hide-desktop {
@@ -164,7 +167,7 @@ button {
 
 .main-section {
     margin: 15% 0 0 0;
-    height: 100vh;
+    height: 100%;
 }
 
 .main-title {
@@ -224,11 +227,12 @@ button {
 
 .act-section {
     margin-bottom: 20rem;
+    height: 100vh;
 }
 
-.buttons {
+.button {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin: 20rem 0;
 }
@@ -236,10 +240,10 @@ button {
 .btn {
     color: var(--light-text-color);
     background-color: var(--button-color);
-    font-size: var(--font-size-m);
-    padding: 2rem 3rem;
-    flex: 30%;
+    font-size: var(--font-size-l);
+    padding: 2rem 8rem;
     border-radius: 2rem;
+    box-shadow: 0 .2rem .2em .2rem rgba(112, 112, 112, 0.5);
 }
 
 .list {
