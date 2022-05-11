@@ -25,8 +25,9 @@
     --padding-main-title: 5rem calc(var(--padding-right) + 20rem) 5rem 3rem; /*adding some extra padding to the right*/
     --padding-content: 5rem calc(var(--padding-right) + 15rem) 5rem 5rem; /*adding some extra padding to the right*/
     --padding-title: 2rem var(--padding-right) 2rem 3rem;
-    --padding-sm-container: 2rem var(var(--padding-right)) 2rem 2rem;
+    --padding-sm-container: 2rem var(--padding-right) 2rem 2rem;
     --margin-content: 4rem 0;
+    --margin-title: 2rem 0;
     --shadow-color: rgba(165, 165, 165, 0.2);
     --margin-left: 20%;
     
@@ -179,7 +180,7 @@ button {
 .title {
     font-size: var(--font-size-l);
     padding: var(--padding-title);
-    margin: 2rem 0;
+    margin: var(--margin-title);
 }
 
 .side-text {
