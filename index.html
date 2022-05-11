@@ -10,17 +10,17 @@
 <body>
     <div class="hero-bg"> <!--element for hero bg image-->
         <div class="container">
-            <header class="header">
-                <div class="flex-sb text-bg"> <!--added this as separate element from header because position fixed from header was conflicting with position absolute from text-bg::after-->
+            <header class="header-fixed">
+                <div class="flex-sb text-bg header"> <!--added this as separate element from header because position fixed from header was conflicting with position absolute from text-bg::after-->
                     <a href="index.html"><img class="svg" src="./images/logo.svg" alt="ELCO logo"></a>
 
                     <nav class="flex">
                         <ul class="flex nav-links">
-                            <li><a href="activitate.html">Activitate</a></li>
-                            <li><a href="#">Portofoliu</a></li>
-                            <li><a href="#">Certificate</a></li>
-                            <li><a href="#">Cariere</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li class="nav-link"><a href="activitate.html">Activitate</a></li>
+                            <li class="nav-link"><a href="#">Portofoliu</a></li>
+                            <li class="nav-link"><a href="#">Certificate</a></li>
+                            <li class="nav-link"><a href="#">Cariere</a></li>
+                            <li class="nav-link"><a href="#">Contact</a></li>
                         </ul>
     
                         <img class="svg hide-desktop" src="./images/menu.svg" alt="menu">
@@ -58,10 +58,12 @@
                     Certificate
                 </h2>
 
-                <div class="smaller-container flex">
-                    <a href="./images/certificat_1.jpg"><img src="./images/certificat_1.jpg" class="certif-img" alt="certificate 1"></a>
-                    <a href="./images/certificat_2.jpg"><img src="./images/certificat_2.jpg" class="certif-img" alt="certificate 2"></a>
-                    <a href="./images/certificat_3.jpg"><img src="./images/certificat_3.jpg" class="certif-img" alt="certificate 3"></a>
+                <div class="smaller-container">
+                    <div class="flex certif-bg">
+                        <a href="./images/certificat_1.jpg"><img src="./images/certificat_1.jpg" class="certif-img" alt="certificate 1"></a>
+                        <a href="./images/certificat_2.jpg"><img src="./images/certificat_2.jpg" class="certif-img" alt="certificate 2"></a>
+                        <a href="./images/certificat_3.jpg"><img src="./images/certificat_3.jpg" class="certif-img" alt="certificate 3"></a>
+                    </div>
                 </div>
             </section>
 
@@ -76,7 +78,7 @@
             </section>
 
             <footer class="text-bg">
-                <div class="contact">
+                <div class="smaller-container flex-wrap">
                     <div class="contact-details">
                         <img class="icon" src="./images/email.svg" alt="email">
                         
