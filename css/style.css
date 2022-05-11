@@ -114,6 +114,12 @@ button {
     align-items: center;
 }
 
+.flex-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .flex {
     display: flex;
 }
@@ -127,6 +133,10 @@ button {
 
 .header {
     padding: var(--padding-header);
+}
+
+.header.text-bg {
+    border-radius: 0 0 0 1.5rem; /* makes top left corner of nav-bar 90degress not rounded*/
 }
 
 .hide-desktop {
@@ -251,15 +261,11 @@ button {
     line-height: 4rem;
 }
 
-footer { /* ToDo Update smaller container!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-    display: flex;
+.footer {
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
 }
 
-footer.text-bg::before {
+.footer.text-bg {
     border-radius: 1.5rem 0 0 0; /* makes bottom left corner of nav-bar 90degress not rounded*/
 }
 
@@ -269,9 +275,6 @@ footer.text-bg::before {
 }
 
 .contact-details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex: 33%;
     padding: 2rem 0;
 }
