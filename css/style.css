@@ -12,6 +12,7 @@
     --filter-color-secondary: rgba(200, 248, 255, .99);
     --filter-color-other: rgba(200, 255, 252, 0.8);
     --button-color: rgb(0, 131, 131);
+    --shadow-color: rgba(165, 165, 165, 0.2);
     --font-family: 'Asap', sans-serif;
     --font-size-s: 1.6rem;
     --font-size-m: 2rem;
@@ -29,8 +30,8 @@
     --padding-sm-container: 0 var(--padding-right) 0 0;
     --margin-content: 4rem 0;
     --margin-title: 2rem 0;
-    --shadow-color: rgba(165, 165, 165, 0.2);
     --margin-left: 20%;
+    --section-separator: 0 0 8rem 0;
     
 }
 
@@ -106,6 +107,10 @@ button {
 
 .smaller-container {
     padding: var(--padding-sm-container);
+}
+
+.section-separator {
+    margin: var(--section-separator) ;
 }
 
 .flex-sb {
@@ -231,7 +236,7 @@ button {
 
 .map {
     width: 100%;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 
 .act-section {
@@ -280,11 +285,12 @@ button {
 }
 
 .contact-details > * {
-    margin: 0 1rem;
+    margin: 0 1rem; /* Used margin instead of padding, padding made the icons change size*/
 }
 
 .copyright {
     font-size: 1rem;
+    padding: .5rem 0;
 }
 
 
