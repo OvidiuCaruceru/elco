@@ -20,10 +20,16 @@
     --font-weight-bold: 700;
     --logo-size: 7rem;
     --icon-size: 3rem;
-    --padding-content-text: 5rem 8rem 5rem 5rem;
-    --padding-title-text: 2rem 0 2rem 3rem;
-    --margin-content-text: 4rem 0;
+    --padding-right: 25%; /* 25% of container is equivalent to 20% of body. Making the left and right white space symmetrical */
+    --padding-header: 1.2rem var(--padding-right) 1.2rem 4rem;
+    --padding-main-title: 5rem calc(var(--padding-right) + 20rem) 5rem 3rem; /*adding some extra padding to the right*/
+    --padding-content: 5rem calc(var(--padding-right) + 15rem) 5rem 5rem; /*adding some extra padding to the right*/
+    --padding-title: 2rem var(--padding-right) 2rem 3rem;
+    --padding-sm-container: 2rem var(var(--padding-right)) 2rem 2rem;
+    --margin-content: 4rem 0;
     --shadow-color: rgba(165, 165, 165, 0.2);
+    --margin-left: 20%;
+    
 }
 
 /* Resets */
@@ -31,12 +37,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-weight: var(--font-weight-regular);
 }
 
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-m);
-    font-weight: var(--font-weight-regular);
     color: var(--dark-text-color);
 }
 
@@ -90,32 +96,35 @@ button {
     overflow: hidden; /* prevents the text-bg::after element from causing side scroll  */
 }
 
-.container,
-.hero-container,
-.secondary-container {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20%;
+.container {
+    margin-left: var(--margin-left);
     position: relative;
+    width: calc(100% - var(--margin-left));
+}
+
+.smaller-container {
+    padding: var(--padding-sm-container);
+}
+
+.flex-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
 }
 
 .header {
-    /* position: fixed; */
-    justify-content: space-between;
-    padding: 1.2rem 4rem;
-    width: 100%;
     top: 0;
+    position: fixed;
+    width: inherit;
+    z-index: 1;
 }
 
 .hide-desktop {
     display: none;
-}
-
-.header,
-.nav-bar,
-.nav-links {
-    display: flex;
-    align-items: center;
 }
 
 .nav-links li {
@@ -132,20 +141,10 @@ button {
 
 .text-bg {
     position: relative;
-    z-index: 0;
-}
-
-.text-bg::before { /* text background */
-    position: absolute;
-    content: '';
+    width: 100%;
+    padding: var(--padding-header);
     background-color: var(--text-bg-color);
-    height: 100%;
-    width: 80vw;
-    left: 0;
-    top: 0;
     border-radius: 1.5rem 0 0 1.5rem;
-    z-index: -1;
-    filter: blur(.1rem);
     box-shadow: 0 .2rem .2em .2rem var(--shadow-color);
 }
 
@@ -154,64 +153,49 @@ button {
     display: inline-block;
     content: '';
     top: 50%;
-    right: 0;
+    right: 25%; /* 25% of container is equivalent to 20% of body. Making the left and right white space symmetrical */
     transform: translateY(-50%);
     background-color: var(--border-color);
     height: 70%;
     width: 1px;
 }
 
-.header.text-bg::before {  /* makes top left corner of nav-bar 90degress not rounded*/
-    border-radius: 0 0 0 1.5rem;
-}
-
 .main-section {
-    margin: 15% 0 0 0;
-    height: 100%;
+    margin-top: 15%;
+    width: 100%;
 }
 
 .main-title {
-    font-size: var(--font-size-xl);
-    line-height: 6rem;
-    padding: 5rem 15rem 5rem 3rem;
-    font-weight: 400; /* Adding this specifically, for some reason the font weight defined in body does not cascade here  */
+    position: relative;
+    margin: var(--margin-content);
 }
 
-.main-title span {
-    position: absolute;
-    display: block;
-    font-size: 3.5rem;
-    font-weight: var(--font-weight-bold);
-    top: 50%;
-    right: -3%;
-    transform: translateY(-50%) rotate(-90deg);
+.motto {
+    font-size: var(--font-size-xl);
+    line-height: 6rem;
+    padding: var(--padding-main-title);
 }
 
 .title {
     font-size: var(--font-size-l);
-    padding: var(--padding-title-text);
+    padding: var(--padding-title);
     margin: 2rem 0;
-    font-weight: 400; /* Adding this specifically, for some reason the font weight defined in body does not cascade here  */
+}
+
+.side-text {
+    position: absolute;
+    top: 50%;
+    left: 73%;
+    transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
 }
 
 .content {
     font-size: var(--font-size-m);
     line-height: 3rem;
-    padding: var(--padding-content-text);
-    margin: var(--margin-content-text);
-    font-weight: 400; /* Adding this specifically, for some reason the font weight defined in body does not cascade here  */
-}
-
-.certificates,
-.location {
-    margin-bottom: 10rem;
-}
-
-.certificates-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: rgba(255, 255, 255, .50);
-    border-radius: 1rem;
+    padding: var(--padding-content);
+    margin: var(--margin-content);
 }
 
 .certif-img {
