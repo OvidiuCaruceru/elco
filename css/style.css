@@ -6,10 +6,10 @@
     --dark-text-color: rgb(0, 0, 0);
     --light-text-color: rgba(255, 255, 255, 1);
     --border-color: rgba(0, 0, 0, .3);
-    --text-bg-color: rgba(255, 255, 255, .92);
+    --text-bg-color: rgba(255, 255, 255, 0.9);
     --section-bg-color: rgba(255, 255, 255, 0.5);
     --filter-color-hero: rgba(155, 220, 224, 0.534);
-    --filter-color-secondary: rgba(200, 248, 255, .99);
+    --filter-color-secondary: rgba(200, 248, 255, 0.98);
     --filter-color-other: rgba(200, 255, 252, 0.8);
     --button-color: rgb(0, 131, 131);
     --shadow-color: rgba(165, 165, 165, 0.2);
@@ -26,7 +26,7 @@
     --padding-header: 1.2rem var(--padding-right) 1.2rem 4rem;
     --padding-main-title: 5rem calc(var(--padding-right) + 20rem) 5rem 3rem; /*adding some extra padding to the right*/
     --padding-content: 5rem calc(var(--padding-right) + 15rem) 5rem 5rem; /*adding some extra padding to the right*/
-    --padding-title: 2rem var(--padding-right) 2rem 3rem;
+    --padding-title: 3rem var(--padding-right) 3rem 4rem;
     --padding-sm-container: 0 var(--padding-right) 0 0;
     --margin-content: 4rem 0;
     --margin-title: 2rem 0;
@@ -169,10 +169,10 @@ button {
 .text-bg {
     position: relative; /*for .text-bg::after*/
     width: 100%;
-    /* padding: var(--padding-header); */
     background-color: var(--text-bg-color);
+    background: linear-gradient(142deg, rgba(255,255,255,1) 66%, rgba(255,255,255,0) 100%); 
     border-radius: 1.5rem 0 0 1.5rem;
-    box-shadow: 0 .2rem .2em .2rem var(--shadow-color);
+    /* box-shadow: 0 .2rem .2rem .2rem var(--shadow-color); */
 }
 
 .text-bg::after { /* vertical border on the text background */
