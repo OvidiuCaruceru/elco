@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="hero-bg"> <!--element for hero bg image-->
+
+    <div class="hero-bg" id="top"> <!--element for hero bg image-->
         <div class="container">
             <header class="header-fixed">
                 <div class="flex-sb text-bg header"> <!--added this as separate element from header because position fixed from header was conflicting with position absolute from text-bg::after-->
@@ -109,6 +110,12 @@
                 </span>
             </footer>
         </div>
+    </div>
+
+    <div class="back-to-top"> <!--button back to top-->
+        <a href="#top">
+            <img class="svg arrow" src="./images/arrow.svg" alt="arrow up">
+        </a>
     </div>
 
 </body>
