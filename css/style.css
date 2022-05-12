@@ -46,7 +46,7 @@ body {
     font-family: var(--font-family);
     font-size: var(--font-size-m);
     color: var(--dark-text-color);
-    position: relative;
+    position: relative; /*for .back-to-top*/
 }
 
 html {
@@ -80,6 +80,7 @@ button {
     background-position: bottom center;
     background-blend-mode: overlay;
     overflow: hidden; /* prevents the text-bg::after element from causing side scroll  */
+    position: relative; /* for .arrow-down  */
 }
 
 .secondary-bg {
@@ -101,8 +102,9 @@ button {
 
 .container {
     margin-left: var(--margin-left);
-    position: relative;
+    position: relative; /*for .header-fixed*/
     width: calc(100% - var(--margin-left));
+    height: auto;
 }
 
 .smaller-container {
@@ -165,7 +167,7 @@ button {
 }
 
 .text-bg {
-    position: relative;
+    position: relative; /*for .text-bg::after*/
     width: 100%;
     /* padding: var(--padding-header); */
     background-color: var(--text-bg-color);
@@ -191,7 +193,7 @@ button {
 }
 
 .main-title {
-    position: relative;
+    position: relative; /*for .side-text*/
     margin: var(--margin-content);
 }
 
@@ -301,12 +303,28 @@ button {
     z-index: 1;
 }
 
-.arrow {
+.arrow-up {
     background-color: var(--button-color);
     border-radius: 50%;
     padding: 1rem;
     box-shadow: 0 .2rem .2em .2rem rgba(146, 146, 146, 0.5);
 }
 
+.arrow-down {
+    opacity: 80%;
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    animation: move-arrow .7s alternate-reverse infinite;
+}
+
+@keyframes move-arrow {
+    from {
+        transform: rotate(180deg) translateY(1rem);
+    }
+    to {
+        transform: rotate(180deg) translateY(0);
+    }
+}
 
 
