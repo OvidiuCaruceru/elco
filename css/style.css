@@ -32,7 +32,6 @@
     --margin-title: 2rem 0;
     --margin-left: 20%;
     --section-separator: 0 0 8rem 0;
-    
 }
 
 /* Resets */
@@ -47,6 +46,7 @@ body {
     font-family: var(--font-family);
     font-size: var(--font-size-m);
     color: var(--dark-text-color);
+    position: relative;
 }
 
 html {
@@ -291,6 +291,21 @@ button {
 .copyright {
     font-size: 1rem;
     padding: .5rem 0;
+}
+
+.back-to-top {
+    display: block;
+    position: fixed;
+    top: 70%;
+    left: 88%;
+    z-index: 1;
+}
+
+.arrow {
+    background-color: var(--button-color);
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0 .2rem .2em .2rem rgba(146, 146, 146, 0.5);
 }
 
 
