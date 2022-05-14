@@ -8,26 +8,29 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-	<div class="activitate-bg" id="container">
+	<div class="activitate-bg" id="top">
 		<div class="container">
-			<header class="header text-bg">
-				<a href="index.html"><img class="svg" src="./images/logo.svg" alt="ELCO logo"></a>
-	
-				<nav class="nav-bar">
-					<ul class="nav-links">
-						<li><a href="index.html">Acasă</a></li>
-						<li><a href="activitate.html">Activitate</a></li>
-						<li><a href="#">Portofoliu</a></li>
-						<li><a href="#">Certificate</a></li>
-						<li><a href="#">Cariere</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-	
-					<img class="svg hide-desktop" src="./images/menu.svg" alt="menu">
-	
-					<img class="svg hide-desktop" src="./images/close.svg" alt="close">
-				</nav>
-			</header>
+			<header class="header-fixed">
+                <div class="flex-sb text-bg header"> <!--added this as separate element from header because position fixed from header was conflicting with position absolute from text-bg::after-->
+                    <a href="index.html">
+                        <img class="svg" src="./images/logo.svg" alt="ELCO logo">
+                    </a>
+
+                    <nav class="flex">
+                        <ul class="flex nav-links">
+                            <li class="nav-link"><a href="activitate.html">Activitate</a></li>
+                            <li class="nav-link"><a href="#">Portofoliu</a></li>
+                            <li class="nav-link"><a href="#">Certificate</a></li>
+                            <li class="nav-link"><a href="#">Cariere</a></li>
+                            <li class="nav-link"><a href="#">Contact</a></li>
+                        </ul>
+    
+                        <img class="svg hide-desktop" src="./images/menu.svg" alt="menu">
+    
+                        <img class="svg hide-desktop" src="./images/close.svg" alt="close">
+                    </nav>
+                </div>
+            </header>
 	
 			<main class="main-section">
 				<section>
