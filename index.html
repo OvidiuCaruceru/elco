@@ -9,118 +9,109 @@
 </head>
 <body>
 
-    <div class="hero-bg" id="top"> <!--element for hero bg image-->
-        <div class="container">
-            <header class="header-fixed">
-                <div class="flex-sb text-bg header"> <!--added this as separate element from header because position fixed from header was conflicting with position absolute from text-bg::after-->
-                    <a href="index.html">
-                        <img class="svg" src="./images/logo.svg" alt="ELCO logo">
-                    </a>
+    <div class="bg bg--hero" id="top"> <!--element for hero bg image-->
+        <header class="frame frame--header">
+                <a> href="index.html">
+                    <img class="svg" src="./images/logo.svg" alt="ELCO logo">
+                </a>
 
-                    <nav class="flex">
-                        <ul class="flex nav-links">
-                            <li class="nav-link"><a href="activitate.html">Activitate</a></li>
-                            <li class="nav-link"><a href="#">Portofoliu</a></li>
-                            <li class="nav-link"><a href="#">Certificate</a></li>
-                            <li class="nav-link"><a href="#">Cariere</a></li>
-                            <li class="nav-link"><a href="#">Contact</a></li>
-                        </ul>
-    
-                        <img class="svg hide-desktop" src="./images/menu.svg" alt="menu">
-    
-                        <img class="svg hide-desktop" src="./images/close.svg" alt="close">
-                    </nav>
+                <nav class="nav">
+                    <ul class="nav__links">
+                        <li class="nav__link nav__link--active"><a href="index.html">Acasă</a></li>
+                        <li class="nav__link"><a href="activitate.html">Activitate</a></li>
+                        <li class="nav__link"><a href="#">Portofoliu</a></li>
+                        <li class="nav__link"><a href="#">Certificate</a></li>
+                        <li class="nav__link"><a href="#">Cariere</a></li>
+                        <li class="nav__link"><a href="#">Contact</a></li>
+                    </ul>
+
+                    <img class="svg svg--hide" src="./images/menu.svg" alt="menu">
+
+                    <img class="svg svg--hide" src="./images/close.svg" alt="close">
+                </nav>
+        </header>
+
+        <main class="bg bg--secondary">
+            <section>
+                <div class="frame">
+                    <h1 class="frame__text frame__text--big">
+                        Soluția completă în instalații electrice cu peste 25 de ani de experiență
+                    </h1>
+                    <span class="frame__text frame__text--side">ELCO SA</span>
                 </div>
-            </header>
 
-            <main class="main-section">
-                <section class="flex-col flex-cen flex-sa">
-                    <div class="main-title"> <!--this extra div avoids conflict in position proprety between text-bg::after and side-text-->
-                        <h1 class="motto text-bg">
-                            Soluția completă în instalații electrice cu peste 25 de ani de experiență
-                        </h1>
-                        <span class="side-text">ELCO SA</span>
-                    </div>
+                <h3 class="frame frame__text">
+                    Proiectăm, executăm și întreținem instalații electrice începând cu anul 1993
+                </h3>
 
-                    <h3 class="content text-bg">
-                        Proiectăm, executăm și întreținem instalații electrice începând cu anul 1993
-                    </h3>
-
-                    <h3 class="content text-bg">
-                        Sistemele noastre electrice sunt optimizate pentru a fi ecologice și fiabile, asigurând eficiența energetică, securitatea și confortul clienților noștri
-                    </h3>
-                </section>
-            </main>
-        </div>
-
-        <img class="svg arrow-down" src="./images/arrow.svg" alt="arrow down">
-    </div>
-
-    <div class="secondary-bg"> <!--element for secondary bg image-->
-        <div class="container">
-            <section class="section-separator">
-                <h2 class="title text-bg">
-                    Certificate
-                </h2>
-
-                <div class="smaller-container">
-                    <div class="flex certif-bg">
-                        <a href="./images/certificat_1.jpg"><img src="./images/certificat_1.jpg" class="certif-img" alt="certificate 1"></a>
-                        <a href="./images/certificat_2.jpg"><img src="./images/certificat_2.jpg" class="certif-img" alt="certificate 2"></a>
-                        <a href="./images/certificat_3.jpg"><img src="./images/certificat_3.jpg" class="certif-img" alt="certificate 3"></a>
-                    </div>
-                </div>
+                <h3 class="frame frame__text">
+                    Sistemele noastre electrice sunt optimizate pentru a fi ecologice și fiabile, asigurând eficiența energetică, securitatea și confortul clienților noștri
+                </h3>
             </section>
+        </main>
 
-            <section class="section-separator">
-                <h2 class="title text-bg">
-                    Locație
-                </h2>
-
-                <div class="smaller-container">
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1389.196576631499!2d25.79086645842804!3d45.863443294777014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b4a49671c7b2eb%3A0x10084a042392d459!2sSC%20Electroconstructia%20ELCO%20SA!5e0!3m2!1sro!2sro!4v1650561976670!5m2!1sro!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </section>
-
-            <footer class="footer smaller-container flex-sb text-bg">
-                <div class="flex-wrap">
-                    <div class="contact-details flex flex-cen">
-                        <img class="icon" src="./images/email.svg" alt="email">
-                        
-                        <span> elco@elco-cv.ro </span>
-                    </div>
-
-                    <div class="contact-details flex flex-cen">
-                        <img class="icon" src="./images/phone.svg" alt="phone">
-                        
-                        <span> 0267 351 009 </span>
-                    </div>
-
-                    <div class="contact-details flex flex-cen">
-                        <img class="icon" src="./images/fax.svg" alt="fax">
-                        
-                        <span> 0267 351 004 </span>
-                    </div>
-
-                    <div class="contact-details flex flex-cen">
-                        <img class="icon" src="./images/address.svg" alt="address">
-                        
-                        <span> str. N. Bălcescu nr. 17, Sf. Gheorghe, CP 520024 </span>
-                    </div>
-                </div>
-
-                <span class="copyright">
-                    Copyright &copy; ELCO SA
-                </span>
-            </footer>
-        </div>
+        <img class="svg svg--arrow-down" src="./images/arrow.svg" alt="arrow down">
     </div>
 
-    <div class="back-to-top"> <!--button back to top-->
-        <a href="#top">
-            <img class="svg arrow-up" src="./images/arrow.svg" alt="arrow up">
-        </a>
+    <div class="bg bg--secondary"> <!--element for secondary bg image-->
+        <section>
+            <h2 class="frame frame__title">
+                Certificate
+            </h2>
+
+            <div class="container container--bg">
+                <a href="./images/certificat_1.jpg"><img src="./images/certificat_1.jpg" class="certif-img" alt="certificate 1"></a>
+                <a href="./images/certificat_2.jpg"><img src="./images/certificat_2.jpg" class="certif-img" alt="certificate 2"></a>
+                <a href="./images/certificat_3.jpg"><img src="./images/certificat_3.jpg" class="certif-img" alt="certificate 3"></a>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="frame frame__title">
+                Locație
+            </h2>
+
+            <div class="container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1389.196576631499!2d25.79086645842804!3d45.863443294777014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b4a49671c7b2eb%3A0x10084a042392d459!2sSC%20Electroconstructia%20ELCO%20SA!5e0!3m2!1sro!2sro!4v1650561976670!5m2!1sro!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <footer class="frame frame--footer">
+            <div class="flex flex--wrap">
+                <div class="contact">
+                    <img class="contact__icon" src="./images/email.svg" alt="email">
+                    
+                    <span class="contact__info"> elco@elco-cv.ro </span>
+                </div>
+
+                <div class="contact">
+                    <img class="contact__icon" src="./images/phone.svg" alt="phone">
+                    
+                    <span class="contact__info"> 0267 351 009 </span>
+                </div>
+
+                <div class="contact">
+                    <img class="contact__icon" src="./images/fax.svg" alt="fax">
+                    
+                    <span class="contact__info"> 0267 351 004 </span>
+                </div>
+
+                <div class="contact">
+                    <img class="contact__icon" src="./images/address.svg" alt="address">
+                    
+                    <span class="contact__info"> str. N. Bălcescu nr. 17, Sf. Gheorghe, CP 520024 </span>
+                </div>
+            </div>
+
+            <span class="copyright">
+                Copyright &copy; ELCO SA
+            </span>
+        </footer>
     </div>
+
+    <a href="#top">
+        <img class="svg svg--arrow-up" src="./images/arrow.svg" alt="arrow up">
+    </a>
 
 </body>
 </html>
