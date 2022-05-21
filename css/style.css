@@ -72,7 +72,7 @@ html {
 
 .bg--hero {
     background: var(--filter-color-hero) url(../images/bg1.jpg);
-    /* background-size: cover; */
+    background-size: cover;
     height: 100vh;
     background-position: bottom center;
     background-blend-mode: overlay;
@@ -84,5 +84,13 @@ html {
 
 .container__item {
     width: 100%;
+}
+
+.nav__link--hide {
+    display: none;
+}
+
+.frame {
+    background-color: var(--text-bg-color);
 }
 
