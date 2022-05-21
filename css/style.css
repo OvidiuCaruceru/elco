@@ -10,7 +10,7 @@
     --section-bg-color: rgba(255, 255, 255, 0.5);
     --filter-color-hero: rgba(155, 220, 224, 0.534);
     --filter-color-secondary: rgba(200, 248, 255, 0.98);
-    --filter-color-other: rgba(200, 255, 252, 0.8);
+    --filter-color-bg: rgba(200, 255, 252, 0.8);
     --button-color: rgb(0, 131, 131);
     --shadow-color: rgba(165, 165, 165, 0.2);
     --font-family: 'Asap', sans-serif;
@@ -53,5 +53,36 @@ body {
 html {
     /* font-size: 10px; */
     font-size: 62.5%;
+}
+
+.svg {
+    width: var(--logo-size);
+}
+
+.svg--hide {
+    display: none;
+}
+
+.bg {
+    background: var(--filter-color-hero);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: lighten;
+}
+
+.bg--hero {
+    background: var(--filter-color-hero) url(../images/bg1.jpg);
+    /* background-size: cover; */
+    height: 100vh;
+    background-position: bottom center;
+    background-blend-mode: overlay;
+}
+
+.container {
+    width: 95%;
+}
+
+.container__item {
+    width: 100%;
 }
 
