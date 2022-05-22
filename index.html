@@ -1,3 +1,17 @@
+<!------------------------------------------------------------------------
+    ----------------------- Legend -----------------------
+
+    Class                       Comment
+
+    bg                          generic block for background image
+    bg--hero                    modifier for when the background image does not take the full height of the body, this is specific for hero image
+    bg--secondary               modifier for when the background image does not take the full height of the body, this is specific for secondary image
+    frame                       block for adding a white strip background
+    wrapper                     a generic wrapper block
+    wrapper--left-padding       the padding left modifier. according to BEM guidelines blocks should not have margins or be positioned directly, so this is used to add padding and by this position the blocks within it
+    wrapper--right-padding      same underlying principle as wrapper--left-padding with the difference that this must be inside the frame class to ensure that the frame is extending to the right side of the frame
+-------------------------------------------------------------------------->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,52 +22,65 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
-    <div class="bg bg--hero" id="top"> <!--element for hero bg image-->
-        <header class="frame frame--header">
-                <a href="index.html">
-                    <img class="svg" src="./images/logo.svg" alt="ELCO logo">
-                </a>
-
-                <nav class="nav">
-                    <ul class="nav__links">
-                        <li class="nav__link nav__link--hide"><a href="index.html">Acasă</a></li>
-                        <li class="nav__link nav__link--hide"><a href="activitate.html">Activitate</a></li>
-                        <li class="nav__link nav__link--hide"><a href="#">Portofoliu</a></li>
-                        <li class="nav__link nav__link--hide"><a href="#">Certificate</a></li>
-                        <li class="nav__link nav__link--hide"><a href="#">Cariere</a></li>
-                        <li class="nav__link nav__link--hide"><a href="#">Contact</a></li>
-                    </ul>
-
-                    <img class="svg svg--hide" src="./images/menu.svg" alt="menu">
-
-                    <img class="svg svg--hide" src="./images/close.svg" alt="close">
-                </nav>
-        </header>
-
-        <main>
-            <section>
-                <div class="frame">
-                    <h1 class="frame__text frame__text--big">
-                        Soluția completă în instalații electrice cu peste 25 de ani de experiență
-                    </h1>
-                    <span class="frame__text frame__text--side">ELCO SA</span>
+    <div class="bg bg--hero" id="top">
+        <div class="wrapper wrapper--left-padding">
+            <header class="frame frame--header">
+                <div class="wrapper wrapper--right-padding">
+                    <a href="index.html">
+                        <img class="svg" src="./images/logo.svg" alt="ELCO logo">
+                    </a>
+    
+                    <nav class="nav">
+                        <ul class="nav__links">
+                            <li class="nav__link nav__link--hide"><a href="index.html">Acasă</a></li>
+                            <li class="nav__link nav__link--hide"><a href="activitate.html">Activitate</a></li>
+                            <li class="nav__link nav__link--hide"><a href="#">Portofoliu</a></li>
+                            <li class="nav__link nav__link--hide"><a href="#">Certificate</a></li>
+                            <li class="nav__link nav__link--hide"><a href="#">Cariere</a></li>
+                            <li class="nav__link nav__link--hide"><a href="#">Contact</a></li>
+                        </ul>
+    
+                        <img class="svg svg--hide" src="./images/menu.svg" alt="menu">
+    
+                        <img class="svg svg--hide" src="./images/close.svg" alt="close">
+                    </nav>
                 </div>
+            </header>
+            
+            <main>
+                <section>
+                    <div class="frame">
+                        <div class="wrapper wrapper--right-padding">
+                            <h1 class="frame__text frame__text--big">
+                                Soluția completă în instalații electrice cu peste 25 de ani de experiență
+                            </h1>
+                            <span class="">ELCO SA</span>
+                        </div>
+                    </div>
+                    
+                    <div class="frame">
+                        <div class="wrapper wrapper--right-padding">                            
+                            <h3 class="frame__text">
+                                Proiectăm, executăm și întreținem instalații electrice începând cu anul 1993
+                            </h3>
+                        </div>
+                    </div>
 
-                <h3 class="frame frame__text">
-                    Proiectăm, executăm și întreținem instalații electrice începând cu anul 1993
-                </h3>
-
-                <h3 class="frame frame__text">
-                    Sistemele noastre electrice sunt optimizate pentru a fi ecologice și fiabile, asigurând eficiența energetică, securitatea și confortul clienților noștri
-                </h3>
-            </section>
-        </main>
+                    <div class="frame">
+                        <div class="wrapper wrapper--right-padding">                            
+                            <h3 class="frame__text">
+                                Sistemele noastre electrice sunt optimizate pentru a fi ecologice și fiabile, asigurând eficiența energetică, securitatea și confortul clienților noștri
+                            </h3>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
 
         <img class="svg svg--arrow-down" src="./images/arrow.svg" alt="arrow down">
     </div>
 
-    <div class="bg bg--secondary"> <!--element for secondary bg image-->
+    <div class="bg bg--secondary">
         <section>
             <div class="frame">
                 <h2 class="frame__title">
