@@ -22,7 +22,12 @@
     --font-weight-bold: 700;
     --logo-size: 7rem;
     --icon-size: 3rem;
-    --padding-right: 25%; /* 25% of container is equivalent to 20% of body. Making the left and right white space symmetrical */
+    --padding-left-s: 5%;
+    --padding-left-m: 15%;
+    --padding-left-l: 25%; /* 25% of container is equivalent to 20% of body. Making the left and right white space symmetrical */
+    --padding-right-s: 5%;
+    --padding-right-m: 15%;
+    --padding-right-l: 25%; /* 25% of container is equivalent to 20% of body. Making the left and right white space symmetrical */
     --padding-header: 1.2rem var(--padding-right) 1.2rem 4rem;
     --padding-main-title: 5rem calc(var(--padding-right) + 20rem) 5rem 3rem; /*adding some extra padding to the right*/
     --padding-content: 5rem calc(var(--padding-right) + 15rem) 5rem 5rem; /*adding some extra padding to the right*/
@@ -42,13 +47,13 @@
     font-weight: var(--font-weight-regular);
 }
 
+/* Base styles */
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-m);
     color: var(--dark-text-color);
     position: relative; /*for .back-to-top*/
 }
-
 
 html {
     /* font-size: 10px; */
@@ -78,19 +83,23 @@ html {
     background-blend-mode: overlay;
 }
 
-.container {
-    width: 95%;
-}
-
-.container__item {
-    width: 100%;
-}
-
 .nav__link--hide {
     display: none;
 }
 
 .frame {
     background-color: var(--text-bg-color);
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.wrapper--left-padding {
+    padding: 0 0 0 var(--padding-left-s);
+}
+
+.wrapper--right-padding {
+    padding: 0 var(--padding-right-s) 0 0;
 }
 
