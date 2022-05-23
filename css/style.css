@@ -68,23 +68,14 @@ html {
     display: none;
 }
 
-.flex {
-    display: flex;
-    align-items: center;
-}
-
-.flex--sb {
-    justify-content: space-between;
-}
-
-.bg {
+.bg-img {
     background: var(--filter-color-hero);
     background-size: cover;
     background-position: center;
     background-blend-mode: lighten;
 }
 
-.bg--hero {
+.bg-img--hero {
     background: var(--filter-color-hero) url(../images/bg1.jpg);
     background-size: cover;
     height: 100vh;
@@ -100,6 +91,3 @@ html {
     background-color: var(--text-bg-color);
 }
 
-.frame--positioning {
-    padding: 0 2rem 0 2rem;
-}
