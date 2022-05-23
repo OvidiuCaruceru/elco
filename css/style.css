@@ -68,6 +68,15 @@ html {
     display: none;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex--sb {
+    justify-content: space-between;
+}
+
 .bg {
     background: var(--filter-color-hero);
     background-size: cover;
@@ -91,15 +100,6 @@ html {
     background-color: var(--text-bg-color);
 }
 
-.wrapper {
-    width: 100%;
+.frame--positioning {
+    padding: 0 2rem 0 2rem;
 }
-
-.wrapper--left-padding {
-    padding: 0 0 0 var(--padding-left-s);
-}
-
-.wrapper--right-padding {
-    padding: 0 var(--padding-right-s) 0 0;
-}
-
