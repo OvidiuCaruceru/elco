@@ -7,7 +7,10 @@
     bg--hero                    modifier for when the background image does not take the full height of the body, this is specific for hero image
     bg--secondary               modifier for when the background image does not take the full height of the body, this is specific for secondary image
     frame                       block for adding a white strip background
-    certificates__wrapper       BEM mix used in combination with wrapper
+    frame__inner                element to add right padding to frame on large screens and to add right and left padding to frame on small screens
+    pos-help                    block which has elements that mix with inner blocks to help position them
+    frame--header               rounds only the bottom-left corner
+
 -------------------------------------------------------------------------->
 
 <!DOCTYPE html>
@@ -23,21 +26,23 @@
     <div class="bg-img bg-img--hero" id="top">
         <div class="pos-help">
             <header class="frame pos-help__frame frame--header">
-                <nav class="frame__inner pos-help__flex pos-help__flex--sb">
-                    <a href="index.html">
-                        <img class="svg" src="./images/logo.svg" alt="ELCO logo">
-                    </a>
-                    <ul class="nav">
-                        <li class="nav__link nav__link--hide"><a href="index.html">Acasă</a></li>
-                        <li class="nav__link nav__link--hide"><a href="activitate.html">Activitate</a></li>
-                        <li class="nav__link nav__link--hide"><a href="#">Portofoliu</a></li>
-                        <li class="nav__link nav__link--hide"><a href="#">Certificate</a></li>
-                        <li class="nav__link nav__link--hide"><a href="#">Cariere</a></li>
-                        <li class="nav__link nav__link--hide"><a href="#">Contact</a></li>
-                    </ul>
-                    <img class="svg" src="./images/menu.svg" alt="menu">
-                    <img class="svg svg--hide" src="./images/close.svg" alt="close">
-                </nav>
+                <div class="frame__header">
+                    <nav class="pos-help__flex pos-help__flex--sb">
+                        <a href="index.html">
+                            <img class="svg" src="./images/logo.svg" alt="ELCO logo">
+                        </a>
+                        <ul class="nav">
+                            <li class="nav__link nav__link--hide"><a href="index.html">Acasă</a></li>
+                            <li class="nav__link nav__link--hide"><a href="activitate.html">Activitate</a></li>
+                            <li class="nav__link nav__link--hide"><a href="#">Portofoliu</a></li>
+                            <li class="nav__link nav__link--hide"><a href="#">Certificate</a></li>
+                            <li class="nav__link nav__link--hide"><a href="#">Cariere</a></li>
+                            <li class="nav__link nav__link--hide"><a href="#">Contact</a></li>
+                        </ul>
+                        <img class="svg" src="./images/menu.svg" alt="menu">
+                        <img class="svg svg--hide" src="./images/close.svg" alt="close">
+                    </nav>
+                </div>
             </header>
             <main>
                 <section>
