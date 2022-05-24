@@ -23,12 +23,9 @@
     --logo-size-s: 6rem;
     --logo-size-l: 7rem;
     --icon-size: 3rem;
-    --padding-left-s: 5%;
-    --padding-left-m: 15%;
-    --padding-left-l: 25%; /* 25% of container is equivalent to 20% of body. Making the left and right white space symmetrical */
-    --padding-right-s: 5%;
-    --padding-right-m: 15%;
-    --padding-right-l: 25%; /* 25% of container is equivalent to 20% of body. Making the left and right white space symmetrical */
+    --spacing-per-s: 5%;
+    --spacing-per-m: 15%;
+    --spacing-per-l: 25%; /* 25% of container is equivalent to 20% of body. Making the left and right white space symmetrical */
     --padding-header: 1.2rem var(--padding-right) 1.2rem 4rem;
     --padding-main-title: 5rem calc(var(--padding-right) + 20rem) 5rem 3rem; /*adding some extra padding to the right*/
     --padding-content: 5rem calc(var(--padding-right) + 15rem) 5rem 5rem; /*adding some extra padding to the right*/
@@ -94,15 +91,40 @@ html {
 }
 
 .frame__inner {
-    padding: 0 2rem;
+    margin: 10% 0 0 0;
+    padding: 3rem 4rem;
+}
+
+.frame__inner--big {
+    margin: 30% 0 0 0;
+    padding: 3rem 3rem;
 }
 
 .frame__header {
     padding: 1rem;
 }
 
+.frame__text {
+    color: black;
+    font-size: 1.8rem;
+}
+
+.frame__text--big {
+    font-size: 2.2rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.frame__side-text {
+    font-size: 4rem;
+    font-weight: var(--font-weight-bold);
+}
+
 .pos-help__flex {
     display: flex;
+}
+
+.pos-help__text {
+    margin: var(--spacing-per-m) 0 0 0;
 }
 
 .pos-help__flex--sb {
