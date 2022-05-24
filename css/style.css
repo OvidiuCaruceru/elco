@@ -20,7 +20,8 @@
     --font-size-xl: 4rem;
     --font-weight-regular: 400;
     --font-weight-bold: 700;
-    --logo-size: 7rem;
+    --logo-size-s: 6rem;
+    --logo-size-l: 7rem;
     --icon-size: 3rem;
     --padding-left-s: 5%;
     --padding-left-m: 15%;
@@ -61,7 +62,8 @@ html {
 }
 
 .svg {
-    width: var(--logo-size);
+    display: block;
+    width: var(--logo-size-s);
 }
 
 .svg--hide {
@@ -91,3 +93,18 @@ html {
     background-color: var(--text-bg-color);
 }
 
+.frame__inner {
+    padding: 0 2rem;
+}
+
+.frame__header {
+    padding: 1rem;
+}
+
+.pos-help__flex {
+    display: flex;
+}
+
+.pos-help__flex--sb {
+    justify-content: space-between;
+}
