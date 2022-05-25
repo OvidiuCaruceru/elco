@@ -87,46 +87,6 @@ html {
 }
 
 .frame {
+    width: 100%;
     background-color: var(--text-bg-color);
-}
-
-.frame__inner {
-    margin: 10% 0 0 0;
-    padding: 3rem 4rem;
-}
-
-.frame__inner--big {
-    margin: 30% 0 0 0;
-    padding: 3rem 3rem;
-}
-
-.frame__header {
-    padding: 1rem;
-}
-
-.frame__text {
-    color: black;
-    font-size: 1.8rem;
-}
-
-.frame__text--big {
-    font-size: 2.2rem;
-    font-weight: var(--font-weight-bold);
-}
-
-.frame__side-text {
-    font-size: 4rem;
-    font-weight: var(--font-weight-bold);
-}
-
-.pos-help__flex {
-    display: flex;
-}
-
-.pos-help__text {
-    margin: var(--spacing-per-m) 0 0 0;
-}
-
-.pos-help__flex--sb {
-    justify-content: space-between;
 }
