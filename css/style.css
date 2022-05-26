@@ -92,6 +92,23 @@ html {
     top: 0;
 }
 
+.header__hide-desktop {
+    display: none;
+}
+
+.main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -123,6 +140,12 @@ html {
     padding: 3rem 0;
 }
 
+.frame__text--carousel {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
 .frame__text--big {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-bold);
@@ -144,3 +167,15 @@ html {
     margin: 5rem 0 0 0;
 }
 
+
+@keyframes frame__text-slide {
+    0% {right: 0%;}
+    45% {right: 0%;}
+    50% {right: 100%;}
+    95% {right: 100%;}
+    100% {right: 0%;}
+}
+
+.carousel {
+animation: frame__text-slide linear 10s infinite;
+}
