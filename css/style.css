@@ -7,7 +7,6 @@
     --light-text-color: rgba(255, 255, 255, 1);
     --border-color: rgba(0, 0, 0, .3);
     --frame-color: rgba(255, 255, 255, 0.9);
-    --section-bg-color: rgba(255, 255, 255, 0.5);
     --filter-color-hero: rgba(155, 220, 224, 0.534);
     --filter-color-secondary: rgba(200, 248, 255, 0.98);
     --filter-color-bg: rgba(200, 255, 252, 0.8);
@@ -24,10 +23,6 @@
     --logo-size-l: 7rem;
     --icon-size: 3rem;
     --padding-frame-lr: 2rem;
-    --margin-content: 4rem 0;
-    --margin-title: 2rem 0;
-    --margin-left: 20%;
-    --section-separator: 0 0 8rem 0;
 }
 
 /* Resets */
@@ -125,7 +120,6 @@ html {
 
 .frame--hero {
     padding: 3rem 4rem;
-
 }
 
 .frame__text {
@@ -163,6 +157,12 @@ html {
     margin: 5rem 0 0 0;
 }
 
+.svg--arrow-down {
+    opacity: 80%;
+    margin: 2rem;
+    animation: move-arrow .7s alternate-reverse infinite;
+}
+
 
 @keyframes frame__text-slide {
     0% {right: 0%;}
@@ -172,6 +172,15 @@ html {
     100% {right: 0%;}
 }
 
+@keyframes move-arrow {
+    from {
+        transform: rotate(180deg) translateY(-1rem);
+    }
+    to {
+        transform: rotate(180deg) translateY(0);
+    }
+}
+
 .carousel {
-animation: frame__text-slide linear 5s infinite;
+animation: frame__text-slide linear 12s infinite;
 }
