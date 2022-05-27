@@ -6,8 +6,9 @@
     --dark-text-color: rgb(0, 0, 0);
     --light-text-color: rgba(255, 255, 255, 1);
     --border-color: rgba(0, 0, 0, .3);
-    --frame-color: rgba(255, 255, 255, 0.9);
-    --filter-color-hero: rgba(155, 220, 224, 0.534);
+    --frame-color: rgba(255, 255, 255, 0.7);
+    /* --frame-color: rgba(255, 255, 255, 0.9); */
+    --filter-color-hero: rgba(155, 220, 224, 0.734);
     --filter-color-secondary: rgba(200, 248, 255, 0.98);
     --filter-color-bg: rgba(200, 255, 252, 0.8);
     --button-color: rgb(0, 131, 131);
@@ -67,6 +68,7 @@ html {
 }
 
 .bg-img--hero {
+    position: relative; /*for svg--arrow-down*/
     background: var(--filter-color-hero) url(../images/bg1.jpg);
     background-size: cover;
     height: 100vh;
@@ -158,6 +160,8 @@ html {
 }
 
 .svg--arrow-down {
+    position: absolute;
+    bottom: 0;
     opacity: 80%;
     margin: 2rem;
     animation: move-arrow .7s alternate-reverse infinite;
