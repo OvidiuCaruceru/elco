@@ -23,14 +23,7 @@
     --logo-size-s: 4rem;
     --logo-size-l: 7rem;
     --icon-size: 3rem;
-    --spacing-per-s: 5%;
-    --spacing-per-m: 15%;
-    --spacing-per-l: 25%; /* 25% of container is equivalent to 20% of body. Making the left and right white space symmetrical */
-    --padding-header: 1.2rem var(--padding-right) 1.2rem 4rem;
-    --padding-main-title: 5rem calc(var(--padding-right) + 20rem) 5rem 3rem; /*adding some extra padding to the right*/
-    --padding-content: 5rem calc(var(--padding-right) + 15rem) 5rem 5rem; /*adding some extra padding to the right*/
-    --padding-title: 3rem var(--padding-right) 3rem 4rem;
-    --padding-sm-container: 0 var(--padding-right) 0 0;
+    --padding-frame-lr: 2rem;
     --margin-content: 4rem 0;
     --margin-title: 2rem 0;
     --margin-left: 20%;
@@ -122,7 +115,7 @@ html {
 .frame {
     width: 100%;
     background-color: var(--frame-color);
-    padding: 0 2rem;
+    padding: 0 var(--padding-frame-lr);
 }
 
 .frame--header {
@@ -138,11 +131,13 @@ html {
 .frame__text {
     font-size: var(--font-size-s);
     padding: 3rem 0;
+    line-height: 2.2rem;
 }
 
 .frame__text--carousel {
     width: 100%;
     flex-shrink: 0;
+    margin: 0 var(--padding-frame-lr) 0 0;
 }
 
 
@@ -150,6 +145,7 @@ html {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-bold);
     padding: 2rem 0;
+    line-height: 3.4rem;
 }
 
 .frame__text--side {
@@ -170,12 +166,12 @@ html {
 
 @keyframes frame__text-slide {
     0% {right: 0%;}
-    45% {right: 0%;}
-    50% {right: 100%;}
-    95% {right: 100%;}
+    49% {right: 0%;}
+    50% {right: calc(100% + var(--padding-frame-lr));} /*+ var(--padding-frame-lr) makes sure that all the text is pushed off the screen*/
+    99% {right: calc(100% + var(--padding-frame-lr));} /*+ var(--padding-frame-lr) makes sure that all the text is pushed off the screen*/
     100% {right: 0%;}
 }
 
 .carousel {
-animation: frame__text-slide linear 10s infinite;
+animation: frame__text-slide linear 5s infinite;
 }
