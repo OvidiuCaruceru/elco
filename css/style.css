@@ -3,7 +3,7 @@
 
 /* Custom propreties */
 :root {
-    --dark-text-color: rgb(0, 0, 0);
+    --dark-text-color: rgb(61, 53, 53);
     --light-text-color: rgba(255, 255, 255, 1);
     --border-color: rgba(0, 0, 0, .3);
     --frame-color: rgba(255, 255, 255, 0.7);
@@ -14,6 +14,7 @@
     --button-color: rgb(0, 131, 131);
     --shadow-color: rgba(165, 165, 165, 0.2);
     --font-family: 'Asap', sans-serif;
+    --font-size-xs: 1.2rem;
     --font-size-s: 1.6rem;
     --font-size-m: 2rem;
     --font-size-l: 3rem;
@@ -76,6 +77,23 @@ html {
     background-blend-mode: overlay;
 }
 
+.bg-img--secondary {
+    background: var(--filter-color-secondary) url(../images/bg2.jpg);
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    background-blend-mode: lighten;
+}
+
+.position {
+    position: relative; /*for .header*/
+    padding: 10% 0 0 0;
+}
+
+.position__frame {
+    margin: 5rem 0 0 0;
+}
+
 .header {
     width: 100%;
     position: fixed;
@@ -83,6 +101,16 @@ html {
 }
 
 .header__hide-desktop {
+    display: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__link--hide {
     display: none;
 }
 
@@ -97,16 +125,6 @@ html {
     position: relative;
     top: 0;
     right: 0;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav__link--hide {
-    display: none;
 }
 
 .frame {
@@ -149,14 +167,31 @@ html {
     font-weight: var(--font-weight-bold);
 }
 
-
-.position {
-    position: relative; /*for .header*/
-    padding: 10% 0 0 0;
+.frame__title {
+    font-size: var(--font-size-m);
+    padding: 1.5rem 0;
+    text-align: center;
 }
 
-.position__frame {
-    margin: 5rem 0 0 0;
+.certificates__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--padding-frame-lr);
+    padding: var(--padding-frame-lr);
+}
+
+.certificates__item {
+    max-width: 100%;
+}
+
+.map__items {
+    padding: var(--padding-frame-lr);
+}
+
+.map__item {
+    width: 100%;
+    height: 40rem;
 }
 
 .svg--arrow-down {
@@ -165,6 +200,26 @@ html {
     opacity: 80%;
     margin: 2rem;
     animation: move-arrow .7s alternate-reverse infinite;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-frame-lr) var(--padding-frame-lr) 1rem var(--padding-frame-lr);
+}
+
+.footer__details {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0 0 0;
+    font-size: var(--font-size-m);
+}
+
+.footer__copyright {
+    padding: 2rem 0 0 0;
+    font-size: var(--font-size-xs);
 }
 
 
