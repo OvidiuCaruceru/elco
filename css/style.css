@@ -81,7 +81,7 @@ html {
     padding: 10% 0 0 0;
 }
 
-.position__frame {
+.home__frame {
     margin: 5rem 0 0 0;
 }
 
@@ -128,12 +128,13 @@ html {
 
 .nav__item {
     list-style-type: none;
-    padding: 2rem 3rem;
 }
 
 .nav__link {
     color: var(--light-text-color);
     text-decoration: none;
+    display: block;
+    padding: 2rem 3rem;
 }
 
 .nav__item:hover {
@@ -143,11 +144,6 @@ html {
 
 .header__hide-desktop {
     display: none;
-}
-
-.main {
-    width: 100%;
-    overflow: hidden;
 }
 
 .carousel {
