@@ -53,31 +53,27 @@ html {
 
 .bg-img {
     position: relative; /*for svg--arrow-up*/
-    background: var(--filter-color-hero);
-    background-size: cover;
+    background-color: var(--filter-color-secondary);
     background-position: center;
-    background-blend-mode: lighten;
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 100%;
 }
 
 .bg-img--hero {
-    position: relative; /*for svg--arrow-down*/
-    background: var(--filter-color-hero) url(../images/bg1.jpg);
-    background-size: cover;
-    height: 100vh;
+    background-image: url(../images/bg1.jpg);
+    background-color: var(--filter-color-hero);
     background-position: bottom center;
-    background-blend-mode: overlay;
+    height: 100vh;
 }
 
 .bg-img--secondary {
-    background: var(--filter-color-secondary) url(../images/bg2.jpg);
-    background-size: cover;
-    height: 100%;
-    background-position: center;
+    background-image: url(../images/bg2.jpg);
     background-blend-mode: lighten;
 }
 
 .bg-img--activity {
-    background: var(--filter-color-secondary) url(../images/bg3.jpg);
+    background-image: url(../images/bg3.jpg);
 }
 
 .position {
