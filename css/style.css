@@ -77,8 +77,8 @@ body {
     background-image: url(../images/bg3.jpg);
 }
 
-.home__frame {
-    margin: 5rem 0 0 0;
+.page__spacing {
+    margin: 3rem 0 0 0;
 }
 
 .header {
@@ -163,25 +163,26 @@ body {
 
 .frame--hero {
     padding: 3rem 4rem;
+    margin: 8vh 0 0 0;
 }
 
 .frame__text {
     font-size: var(--font-size-s);
-    padding: 3rem 0;
+    padding: 3rem var(--padding-frame-lr);
     line-height: 2.2rem;
 }
 
 .frame__text--carousel {
     width: 100%;
     flex-shrink: 0;
+    padding: 3rem 0;
     margin: 0 var(--padding-frame-lr) 0 0;
 }
-
 
 .frame__text--big {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-bold);
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     line-height: 3.4rem;
 }
 
@@ -194,6 +195,10 @@ body {
     font-size: var(--font-size-m);
     padding: 1.5rem 0;
     text-align: center;
+}
+
+.hero-section {
+    height: 100vh;
 }
 
 .certificates__items {
