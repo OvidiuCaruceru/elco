@@ -8,7 +8,7 @@
     --border-color: rgba(0, 0, 0, .3);
     --frame-color: rgba(255, 255, 255, 0.7);
     --filter-color-hero: rgba(155, 220, 224, 0.734);
-    --filter-color-secondary: rgba(200, 248, 255, 0.98);
+    --filter-color-secondary: rgba(200, 248, 255, 0.78);
     --filter-color-bg: rgba(200, 255, 252, 0.8);
     --button-color: rgb(0, 131, 131);
     --shadow-color: rgba(165, 165, 165, 0.2);
@@ -201,6 +201,12 @@ body {
     height: 100vh;
 }
 
+.hero-section__button {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
 .certificates__items {
     display: flex;
     flex-direction: column;
@@ -242,6 +248,16 @@ body {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
+}
+
+.button {
+    color: var(--light-text-color);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 1rem;
+    font-size: var(--font-size-m);
+    padding: 1rem 4rem;
+    box-shadow: 0 .2rem .2em .2rem rgba(112, 112, 112, 0.5);
 }
 
 .footer {
