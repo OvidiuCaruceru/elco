@@ -6,7 +6,7 @@
     --dark-text-color: rgb(61, 53, 53);
     --light-text-color: rgba(255, 255, 255, 1);
     --border-color: rgba(0, 0, 0, .3);
-    --frame-color: rgba(255, 255, 255, 0.7);
+    --frame-color: rgba(255, 255, 255, 0.85);
     --filter-color-hero: rgba(155, 220, 224, 0.734);
     --filter-color-secondary: rgba(200, 248, 255, 0.78);
     --filter-color-bg: rgba(200, 255, 252, 0.8);
@@ -168,6 +168,7 @@ body {
 
 .frame--carousel {
     margin: var(--v-separator) 0 0 0;
+    overflow: hidden;
 }
 
 .frame--hero {
@@ -329,5 +330,5 @@ body {
 }
 
 .carousel {
-animation: frame__text-slide linear 12s infinite;
+animation: frame__text-slide linear 15s infinite;
 }
