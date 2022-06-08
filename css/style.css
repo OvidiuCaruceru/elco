@@ -97,6 +97,7 @@ body {
 .header__svg {
     background-color: var(--frame-color);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .header__svg--close {
@@ -204,7 +205,7 @@ body {
 .hero-section__button {
     display: flex;
     justify-content: center;
-    margin: 2rem;
+    margin: 3rem 0 0 0;
 }
 
 .certificates__items {
@@ -258,6 +259,7 @@ body {
     font-size: var(--font-size-m);
     padding: 1rem 4rem;
     box-shadow: 0 .2rem .2em .2rem rgba(112, 112, 112, 0.5);
+    text-decoration: none;
 }
 
 .footer {
