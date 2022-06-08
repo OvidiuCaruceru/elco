@@ -24,6 +24,7 @@
     --logo-size-l: 7rem;
     --icon-size: 2rem;
     --padding-frame-lr: 2rem;
+    --v-separator: 3rem;
 }
 
 /* Resets */
@@ -77,10 +78,6 @@ body {
     background-image: url(../images/bg3.jpg);
 }
 
-.page__spacing {
-    margin: 3rem 0 0 0;
-}
-
 .header {
     width: 100%;
     position: fixed;
@@ -92,7 +89,6 @@ body {
     justify-content: space-between;
     align-items: flex-start;
 }
-
 
 .header__svg {
     background-color: var(--frame-color);
@@ -162,6 +158,10 @@ body {
     background-color: transparent;
 }
 
+.frame--carousel {
+    margin: var(--v-separator) 0 0 0;
+}
+
 .frame--hero {
     padding: 3rem 4rem;
     margin: 8vh 0 0 0;
@@ -169,6 +169,7 @@ body {
 
 .frame__text {
     font-size: var(--font-size-s);
+    margin: var(--v-separator) 0 0 0;
     padding: 3rem var(--padding-frame-lr);
     line-height: 2.2rem;
 }
@@ -183,6 +184,7 @@ body {
 .frame__text--big {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-bold);
+    margin: 0;
     padding: 2rem 0 0 0;
     line-height: 3.4rem;
 }
