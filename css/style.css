@@ -86,6 +86,10 @@ body {
     background-image: url(../images/bg3.jpg);
 }
 
+.bg-img--portfolio {
+    background-image: url(../images/bg4.jpg);
+}
+
 .header {
     width: 100%;
     position: fixed;
@@ -285,6 +289,15 @@ body {
     padding: 1rem 4rem;
     box-shadow: 0 .2rem .2em .2rem rgba(112, 112, 112, 0.5);
     text-decoration: none;
+}
+
+.slideshow {
+    /* width: 100%; */
+    position: relative; /*for slideshow__prev and slideshow__next*/
+}
+
+.slideshow__image {
+    width: 100%;
 }
 
 .footer {
