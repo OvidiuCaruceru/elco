@@ -33,51 +33,54 @@
         </header>
 
         <main>
-            <div class="slideshow">
-
+            <section class="slideshow">
                 <div class="slideshow__images">
-                    <figure class="slideshow__item" id="slideshow__item"> <!-- number of .slideshow__dot must be the same as number of slideshow__image -->
-                        <img src="./images/foto1.jpg" alt="patinoar artificial exterior" class="slideshow__image">
+                    <figure class="slideshow__item" id="slideshow__item"> <!-- number of .slideshow__dot must match the number of slideshow__image -->
+                        <img  class="slideshow__image" src="./images/foto1.jpg" alt="patinoar artificial exterior">
                     </figure>
 
                     <figure class="slideshow__item" id="slideshow__item">
-                        <img src="./images/foto2.jpg" alt="patinoar artificial interior" class="slideshow__image">
+                        <img  class="slideshow__image" src="./images/foto2.jpg" alt="patinoar artificial interior">
 
                     <figure class="slideshow__item" id="slideshow__item">
-                        <img src="./images/foto3.jpg" alt="arena Sepsi" class="slideshow__image">
+                        <img  class="slideshow__image" src="./images/foto3.jpg" alt="arena Sepsi">
                     </figure>
 
                     <figure class="slideshow__item" id="slideshow__item">
-                        <img src="./images/foto4.jpg" alt="arena Sepsi" class="slideshow__image">
+                        <img  class="slideshow__image" src="./images/foto4.jpg" alt="arena Sepsi">
                     </figure>
 
                     <figure class="slideshow__item" id="slideshow__item">
-                        <img src="./images/foto5.jpg" alt="bertis" class="slideshow__image">
+                        <img  class="slideshow__image" src="./images/foto5.jpg" alt="bertis">
                     </figure>
 
                     <figure class="slideshow__item" id="slideshow__item">
-                        <img src="./images/foto6.jpg" alt="cinema arta" class="slideshow__image">
+                        <img  class="slideshow__image" src="./images/foto6.jpg" alt="cinema arta">
                     </figure>
                 </div>
 
-                <a class="slideshow__arrow slideshow__arrow--prev" id="slideshow__arrow--prev">&#10094;</a>
+                <button class="slideshow__arrow" id="arrow-prev">
+                    <img src="./images/arrow_side.svg" alt="previous image">
+                </button>
 
-                <a class="slideshow__arrow slideshow__arrow--next" id="sslideshow__arrow--next">&#10095;</a>
+                <button class="slideshow__arrow slideshow__arrow--next" id="arrow-next">
+                    <img src="./images/arrow_side.svg" alt="next iamge">
+                </button>
 
-                <div class="slideshow__dots"> <!-- number of .slideshow__dot must be the same as number of slideshow__image -->
-                    <span class="slideshow__dot" id="slideshow__dot"></span>
+                <div class="slideshow__dots"> <!-- number of .slideshow__dot must match the number of slideshow__image -->
+                    <button class="slideshow__dot" id="slideshow__dot"></button>
 
-                    <span class="slideshow__dot" id="slideshow__dot"></span>
-                    
-                    <span class="slideshow__dot" id="slideshow__dot"></span>
+                    <button class="slideshow__dot" id="slideshow__dot"></button>
 
-                    <span class="slideshow__dot" id="slideshow__dot"></span>
+                    <button class="slideshow__dot" id="slideshow__dot"></button>
 
-                    <span class="slideshow__dot" id="slideshow__dot"></span>
+                    <button class="slideshow__dot" id="slideshow__dot"></button>
 
-                    <span class="slideshow__dot" id="slideshow__dot"></span>
+                    <button class="slideshow__dot" id="slideshow__dot"></button>
+
+                    <button class="slideshow__dot" id="slideshow__dot"></button>
                 </div>
-            </div>
+            </section>
         </main>
 
         <footer class="frame frame--footer">
