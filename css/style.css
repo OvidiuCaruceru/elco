@@ -280,7 +280,7 @@ body {
     right: 2rem;
 }
 
-.button {
+.text-button {
     color: var(--light-text-color);
     background-color: var(--button-color);
     border: none;
