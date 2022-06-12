@@ -25,6 +25,7 @@
     --icon-size: 2rem;
     --padding-frame-lr: 2rem;
     --v-separator: 3rem;
+    --slideshow-btn-pos: 1.5rem;
 }
 
 /* Resets */
@@ -63,11 +64,7 @@ body {
 }
 
 .page__separator {
-    margin: 8rem 0;
-}
-
-.page__separator--first {
-    margin: 0 0 8rem 0;
+    margin: 8rem 0 0 0;
 }
 
 .bg-img--hero {
@@ -292,52 +289,73 @@ body {
 }
 
 .slideshow {
-    /* width: 100%; */
-    position: relative; /*for slideshow__prev and slideshow__next*/
+    position: relative; /*for .slideshow__button*/
+    height: 40vh;
+    padding: 0 1rem;
 }
 
 .slideshow__images {
-    display: none;
-}
-
-
-.slideshow__image {
+    position: relative; /*for .slideshow__item*/
+    height: 100%;
     width: 100%;
 }
 
-.slideshow__arrow {
-    cursor: pointer;
+.slideshow__item {
     position: absolute;
-    top: 50%;
-    padding: 2rem;
-    color: var(--dark-text-color);
-    font-size: 5rem;
-    transition: .5s ease;
-    user-select: none;
+    width: 100%;
+    height: 100%;
 }
 
-.slideshow__arrow:hover {
+.slideshow__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideshow__button {
+    position: absolute;
     background-color: var(--button-color);
+    border: none;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
-.slideshow__arrow--next {
-    right: 0;
+.slideshow__button--prev {
+    left: var(--slideshow-btn-pos);
+}
+
+.slideshow__button--next {
+    right: var(--slideshow-btn-pos);
+}
+
+.slideshow__svg {
+    width: 3.5rem;
+}
+
+.slideshow__svg--next {
+    transform: rotate(180deg);
+}
+
+.slideshow__dots {
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0;
 }
 
 .slideshow__dot {
-    cursor: pointer;
-    height: 1rem;
-    width: 1rem;
-    margin: 0 .2rem;
-    background-color: #bbb;
+    width: 2rem;
+    height: 2rem;
+    border: none;
     border-radius: 50%;
-    display: inline-block;
-    transition: background-color .5s ease;
+    margin: 0 .3rem;
+    background-color: rgba(0, 0, 0, .25);
+    cursor: pointer;
 }
 
-.slideshow__dot--active,
-.slideshow__dot:hover {
-    background-color: #717171;
+.slideshow__dot--active {
+    background-color: rgba(0, 0, 0, .7);
 }
 
 .footer {
