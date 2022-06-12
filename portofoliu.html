@@ -33,42 +33,43 @@
         </header>
 
         <main>
-            <section class="slideshow">
-                <div class="slideshow__images">
+            <section class="slideshow page__separator">
+                <div class="slideshow__images" id="slideshow__images">
                     <figure class="slideshow__item" id="slideshow__item"> <!-- number of .slideshow__dot must match the number of slideshow__image -->
                         <img  class="slideshow__image" src="./images/foto1.jpg" alt="patinoar artificial exterior">
                     </figure>
 
                     <figure class="slideshow__item" id="slideshow__item">
-                        <img  class="slideshow__image" src="./images/foto2.jpg" alt="patinoar artificial interior">
-
-                    <figure class="slideshow__item" id="slideshow__item">
-                        <img  class="slideshow__image" src="./images/foto3.jpg" alt="arena Sepsi">
+                        <img class="slideshow__image" src="./images/foto2.jpg" alt="patinoar artificial interior">
                     </figure>
 
                     <figure class="slideshow__item" id="slideshow__item">
-                        <img  class="slideshow__image" src="./images/foto4.jpg" alt="arena Sepsi">
+                        <img class="slideshow__image" src="./images/foto3.jpg" alt="arena Sepsi">
                     </figure>
 
                     <figure class="slideshow__item" id="slideshow__item">
-                        <img  class="slideshow__image" src="./images/foto5.jpg" alt="bertis">
+                        <img class="slideshow__image" src="./images/foto4.jpg" alt="arena Sepsi">
                     </figure>
 
                     <figure class="slideshow__item" id="slideshow__item">
-                        <img  class="slideshow__image" src="./images/foto6.jpg" alt="cinema arta">
+                        <img class="slideshow__image" src="./images/foto5.jpg" alt="bertis">
+                    </figure>
+
+                    <figure class="slideshow__item" id="slideshow__item">
+                        <img class="slideshow__image" src="./images/foto6.jpg" alt="cinema arta">
                     </figure>
                 </div>
 
-                <button class="slideshow__arrow" id="arrow-prev">
-                    <img src="./images/arrow_side.svg" alt="previous image">
+                <button class="slideshow__button slideshow__button--prev" id="slideshow__button--prev">
+                    <img class="svg slideshow__svg" src="./images/arrow_side.svg" alt="previous image">
                 </button>
 
-                <button class="slideshow__arrow slideshow__arrow--next" id="arrow-next">
-                    <img src="./images/arrow_side.svg" alt="next iamge">
+                <button class="slideshow__button slideshow__button--next" id="slideshow__button--next">
+                    <img class="svg slideshow__svg slideshow__svg--next" src="./images/arrow_side.svg" alt="next iamge">
                 </button>
 
                 <div class="slideshow__dots"> <!-- number of .slideshow__dot must match the number of slideshow__image -->
-                    <button class="slideshow__dot" id="slideshow__dot"></button>
+                    <button class="slideshow__dot slideshow__dot--active" id="slideshow__dot"></button>
 
                     <button class="slideshow__dot" id="slideshow__dot"></button>
 
