@@ -10,5 +10,3 @@ menu.addEventListener('click', () => {
 close.addEventListener('click', () => {
     nav.classList.remove('nav--open');
 });
-
-//.slideshow portofoliu.html
