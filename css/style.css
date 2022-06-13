@@ -298,10 +298,11 @@ body {
     position: relative; /*for .slideshow__item*/
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .slideshow__item {
-    position: absolute;
+    position: absolute; /*for script.js chainSlides*/
     width: 100%;
     height: 100%;
 }
