@@ -12,16 +12,27 @@ close.addEventListener('click', () => {
 });
 
 /////////////////////////////////////////////////// .slideshow functionality ///////////////////////////////////////////////////
-const slideshow = document.querySelector('.slideshow__images');
-const slides = Array.from(slideshow.children);
-const prevButton = slideshow.querySelector('.slideshow__button--prev');
-const nextButton = slideshow.querySelector('.slideshow__button--next');
-const dotsContainer = slideshow.querySelector('slideshow__dots');
-const dotsArray = slideshow.getElementsByClassName('slideshow__dot');
+const slideshowTrack = document.querySelector('.slideshow__track');
+const slideshowItems = Array.from(slideshowTrack.children);
+const prevButton = document.querySelector('.slideshow__button--prev');
+const nextButton = document.querySelector('.slideshow__button--next');
+const dotsContainer = document.querySelector('slideshow__dots');
+const dotsArray = Array.from('slideshow__dot');
 
 //move each slide to the right of previous slide to form a row of images
 const chainSlides = (slide, index) => {
-    slide.style.left = slides[index].getBoundingClientRect().width * index + 'px';
+    slide.style.left = slideshowItems[index].getBoundingClientRect().width * index + 'px';
 };
 
-slides.forEach(chainSlides);
+slideshowItems.forEach(chainSlides);
+
+//move to the next slide when nextButton is pushed
+nextButton.addEventListener('click', () => {
+    const currentSlide = slideshowTrack.querySelector('.slideshow__item--current');
+    const nextSlide = currentSlide.nextElementSibling;
+    const slideWidth = nextSlide.style.left;
+
+    slideshowTrack.style.transform = 'translateX(-' + slideWidth + ')';
+    currentSlide.classList.remove('slideshow__item--current');
+    nextSlide.classList.add('slideshow__item--current');
+});
