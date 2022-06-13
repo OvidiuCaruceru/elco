@@ -288,17 +288,24 @@ body {
     text-decoration: none;
 }
 
+.slideshow__inner {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 .slideshow {
     position: relative; /*for .slideshow__button*/
     height: 40vh;
     padding: 0 1rem;
+    overflow: hidden;
 }
 
-.slideshow__images {
+.slideshow__track {
     position: relative; /*for .slideshow__item*/
     height: 100%;
-    width: 100%;
-    overflow: hidden;
+    transition: transform 200ms ease-in;
+
 }
 
 .slideshow__item {
@@ -311,6 +318,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
 }
 
 .slideshow__button {
