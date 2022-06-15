@@ -16,8 +16,8 @@ const carouselTrack = document.querySelector('.carousel__track');
 const carouselItems = Array.from(carouselTrack.children);
 const prevButton = document.querySelector('.carousel__button--prev');
 const nextButton = document.querySelector('.carousel__button--next');
-const dotsContainer = document.querySelector('carousel__dots');
-const dotsArray = Array.from('carousel__dot');
+const dotsContainer = document.querySelector('.carousel__dots');
+const dotsArray = Array.from(dotsContainer.children);
 
 //move each slide to the right of previous slide to form a row of images
 const chainSlides = (slide, index) => {
@@ -26,13 +26,23 @@ const chainSlides = (slide, index) => {
 
 carouselItems.forEach(chainSlides);
 
+const moveToSlide = (carouselTrack, currentSlide, targetSlide) => {
+    carouselTrack.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    currentSlide.classList.remove('carousel__item--current');
+    targetSlide.classList.add('carousel__item--current');
+}
 //move to the next slide when nextButton is pushed
 nextButton.addEventListener('click', () => {
     const currentSlide = carouselTrack.querySelector('.carousel__item--current');
     const nextSlide = currentSlide.nextElementSibling;
-    const slideWidth = nextSlide.style.left;
 
-    carouselTrack.style.transform = 'translateX(-' + slideWidth + ')';
-    currentSlide.classList.remove('carousel__item--current');
-    nextSlide.classList.add('carousel__item--current');
+    moveToSlide(carouselTrack, currentSlide, nextSlide);
+});
+
+//move to the previous slide when prevButton is pushed
+prevButton.addEventListener('click', () => {
+    const currentSlide = carouselTrack.querySelector('.carousel__item--current');
+    const prevSlide = currentSlide.previousElementSibling;
+
+    moveToSlide(carouselTrack, currentSlide, prevSlide);
 });
