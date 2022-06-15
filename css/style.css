@@ -148,7 +148,7 @@ body {
     display: none;
 }
 
-.carousel {
+.carousel-txt {
     display: flex;
     align-items: center;
     position: relative;
@@ -288,16 +288,15 @@ body {
     text-decoration: none;
 }
 
-.carousel__inner {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
 .carousel {
     position: relative; /*for .carousel__button*/
     height: 40vh;
     padding: 0 1rem;
+}
+
+.carousel__inner {
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -364,7 +363,7 @@ body {
 }
 
 .carousel__dot--active {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .footer {
@@ -409,6 +408,6 @@ body {
     }
 }
 
-.carousel {
+.carousel-txt {
 animation: frame__text-slide linear 15s infinite;
 }
