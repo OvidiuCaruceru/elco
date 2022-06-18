@@ -37,15 +37,30 @@ const updateDots = (currentDot, targetDot) => {
     targetDot.classList.add('carousel__dot--active');
 }
 
+const hideShowButtons = (targetIndex, prevButton, nextButton, dotsArray) => {
+    if(targetIndex === 0) {
+        prevButton.classList.add('is-hidden');
+        nextButton.classList.remove('is-hidden');
+    } else if(targetIndex === dotsArray.length - 1) {
+        nextButton.classList.add('is-hidden');
+        prevButton.classList.remove('is-hidden');
+    } else {
+        prevButton.classList.remove('is-hidden');
+        nextButton.classList.remove('is-hidden');
+    }
+}
+
 //move to the next slide when nextButton is pushed
 nextButton.addEventListener('click', () => {
     const currentSlide = carouselTrack.querySelector('.carousel__item--current');
     const nextSlide = currentSlide.nextElementSibling;
     const currentDot = dotsContainer.querySelector('.carousel__dot--active');
     const nextDot = currentDot.nextElementSibling;
+    const nextIndex = carouselItems.findIndex(slide => slide === nextSlide);
 
     moveToSlide(carouselTrack, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
+    hideShowButtons(nextIndex, prevButton, nextButton, carouselItems)
 });
 
 //move to the previous slide when prevButton is pushed
@@ -54,9 +69,11 @@ prevButton.addEventListener('click', () => {
     const prevSlide = currentSlide.previousElementSibling;
     const currentDot = dotsContainer.querySelector('.carousel__dot--active');
     const prevDot = currentDot.previousElementSibling;
+    const prevIndex = carouselItems.findIndex(slide => slide === prevSlide);
 
     moveToSlide(carouselTrack, currentSlide, prevSlide);
     updateDots(currentDot, prevDot);
+    hideShowButtons(prevIndex, prevButton, nextButton, carouselItems);
 });
 
 //move directly to the slide corresponding to the dot clicked on
@@ -64,7 +81,7 @@ dotsContainer.addEventListener('click', e => {
     const targetDot = e.target.closest('button');
 
     //because there's a single event listener for the entire dotsContainer, not separate event listeneres for each dot, the full script in the event listener will run only when a specific dot was clicked
-    if (!targetDot) return;
+    if(!targetDot) return;
 
     const currentSlide = carouselTrack.querySelector('.carousel__item--current');
     const currentDot = dotsContainer.querySelector('.carousel__dot--active');
@@ -73,4 +90,5 @@ dotsContainer.addEventListener('click', e => {
 
     moveToSlide(carouselTrack, currentSlide, targetSlide);
     updateDots(currentDot, targetDot);
+    hideShowButtons(targetIndex, prevButton, nextButton, dotsArray);
 });
