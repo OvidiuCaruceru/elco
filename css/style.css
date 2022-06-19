@@ -177,17 +177,22 @@ body {
     margin: 8vh 0 0 0;
 }
 
+.frame--card {
+    border-radius: .5rem;
+    padding: var(--padding-frame-lr);
+}
+
 .frame__text {
     font-size: var(--font-size-s);
     margin: var(--v-separator) 0 0 0;
     padding: 3rem var(--padding-frame-lr);
-    line-height: 2.2rem;
+    line-height: 2.5rem;
 }
 
 .frame__text--list {
     margin: 0.5rem 0 0 0;
     padding: 2rem var(--padding-frame-lr) 2rem 3.5rem;
-    line-height: 2.2rem;
+    line-height: 2.5rem;
 }
 
 .frame__text--carousel {
@@ -370,6 +375,20 @@ body {
 
 .cards {
     padding: var(--padding-frame-lr);
+}
+
+.cards__item {
+    font-size: var(--font-size-s);
+    line-height: 2.5rem;
+}
+
+.cards__list {
+    padding: 1rem 0 1rem 3rem;
+}
+
+.cards__year {
+    text-align: center;
+    padding: 2rem 0 0 0;
 }
 
 .footer {
