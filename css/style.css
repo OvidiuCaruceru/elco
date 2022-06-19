@@ -25,7 +25,7 @@
     --icon-size: 2rem;
     --padding-frame-lr: 2rem;
     --v-separator: 3rem;
-    --carousel-btn-pos: 1.5rem;
+    --carousel-btn-pos: 0.5rem;
 }
 
 /* Resets */
@@ -167,7 +167,7 @@ body {
     background-color: transparent;
 }
 
-.frame--carousel {
+.frame--carousel-txt {
     margin: var(--v-separator) 0 0 0;
     overflow: hidden;
 }
@@ -289,12 +289,14 @@ body {
 }
 
 .carousel {
-    position: relative; /*for .carousel__button*/
+    display: flex; /*without this proprety .carousel__dots would be place outside the container, overlapping with the elements in the next container*/
+    flex-direction: column;
     height: 40vh;
     padding: 0 1rem;
 }
 
 .carousel__inner {
+    position: relative; /*for .carousel__button*/
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -364,6 +366,10 @@ body {
 
 .carousel__dot--active {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.cards {
+    padding: var(--padding-frame-lr);
 }
 
 .footer {
