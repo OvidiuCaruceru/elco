@@ -381,10 +381,15 @@ body {
 .cards__item {
     font-size: var(--font-size-s);
     line-height: 2.5rem;
+    margin-top: 2rem;
 }
 
 .cards__list {
-    padding: 1rem 0 1rem 3rem;
+    padding: 0 0 1rem 3rem;
+}
+
+.cards__description {
+    padding: 0 0 1rem 0;
 }
 
 .cards__year {
