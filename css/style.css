@@ -4,6 +4,7 @@
 /* Custom propreties */
 :root {
     --dark-text-color: rgb(61, 53, 53);
+    --gray-text-color: rgb(143, 143, 143);
     --light-text-color: rgba(255, 255, 255, 1);
     --border-color: rgba(0, 0, 0, .3);
     --frame-color: rgba(255, 255, 255, 0.85);
@@ -179,7 +180,7 @@ body {
 
 .frame--card {
     border-radius: .5rem;
-    padding: var(--padding-frame-lr);
+    padding: 2rem 2rem .5rem 2rem;
 }
 
 .frame__text {
@@ -387,8 +388,27 @@ body {
 }
 
 .cards__year {
+    position: relative; /*for .cards__year::before*/
     text-align: center;
     padding: 2rem 0 0 0;
+    color: var(--gray-text-color);
+}
+
+.cards__year::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
+    content: '';
+    background-color: var(--gray-text-color);
+    display: block;
+    width: 20%;
+    height: .1rem;
+}
+
+.cards__highlight {
+    color: var(--button-color);
+    font-weight: bold;
 }
 
 .footer {
