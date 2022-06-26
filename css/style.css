@@ -88,6 +88,10 @@ body {
     background-image: url(../images/bg4.jpg);
 }
 
+.bg-img--careers {  
+    background-image: url(../images/bg5.jpg);
+}
+
 .header {
     width: 100%;
     position: fixed;
