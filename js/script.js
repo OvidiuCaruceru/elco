@@ -80,7 +80,7 @@ prevButton.addEventListener('click', () => {
 dotsContainer.addEventListener('click', e => {
     const targetDot = e.target.closest('button');
 
-    //because there's a single event listener for the entire dotsContainer, not separate event listeneres for each dot, the full script in the event listener will run only when a specific dot was clicked
+    //because there's a single event listener for the entire dotsContainer, in order to not make separate event listeneres for each dot, the full script in the event listener will run only when a specific dot was clicked
     if(!targetDot) return;
 
     const currentSlide = carouselTrack.querySelector('.carousel__item--current');
