@@ -23,6 +23,6 @@ Desktop - pending
 Pages:  
 Acasa - done  
 Activitate - done  
-Portofoliu - in progress  
-Cariere - pending  
-Contact - pending  
+Portofoliu - done
+Cariere - pending
+Contact - pending
