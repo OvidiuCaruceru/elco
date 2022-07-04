@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;600&display=swap');
 
 /* Custom propreties */
 :root {
@@ -20,7 +20,7 @@
     --font-size-l: 3rem;
     --font-size-xl: 4rem;
     --font-weight-regular: 400;
-    --font-weight-bold: 700;
+    --font-weight-bold: 600;
     --logo-size-s: 4rem;
     --logo-size-l: 7rem;
     --icon-size: 2rem;
@@ -68,8 +68,20 @@ body {
     margin: 8rem 0 0 0;
 }
 
-.page__counter {
+.page__counter-parent {
+    counter-reset: css-counter 0;
+}
 
+.page__counter-child {
+    counter-increment: css-counter 1;
+}
+
+.page__counter-child::before {
+    content: counter(css-counter) ". ";
+}
+
+.page__bold {
+    font-weight: var(--font-weight-bold);
 }
 
 .bg-img--hero {
@@ -235,6 +247,10 @@ body {
 .frame__text--side {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
+}
+
+.frame__text--ms {
+    margin: 1rem 0 0 0;
 }
 
 .frame__title {
@@ -448,6 +464,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: var(--padding-frame-lr) var(--padding-frame-lr) 1rem var(--padding-frame-lr);
+    margin: 3rem 0 0 0;
 }
 
 .footer__details {
