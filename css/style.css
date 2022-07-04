@@ -188,6 +188,10 @@ body {
     padding: 2rem 2rem .5rem 2rem;
 }
 
+.frame--subtitle {
+
+}
+
 .frame__text {
     font-size: var(--font-size-s);
     margin: var(--v-separator) 0 0 0;
@@ -198,6 +202,12 @@ body {
 .frame__text--list {
     margin: 0;
     padding: 2rem var(--padding-frame-lr) 2rem 3.5rem;
+    line-height: 2.5rem;
+}
+
+.frame__text--inner-list {
+    margin: 0;
+    padding: 2rem var(--padding-frame-lr) 0 3.5rem;
     line-height: 2.5rem;
 }
 
@@ -216,6 +226,11 @@ body {
     line-height: 3.4rem;
 }
 
+.frame__text--medium {
+    font-size: var(--font-size-m);
+    padding: 1.5rem 0;
+}
+
 .frame__text--side {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
@@ -230,6 +245,10 @@ body {
 
 .frame__list-item {
     padding: 1rem 0;
+}
+
+.frame__list-item--last {
+    padding: 1rem 0 0 0;
 }
 
 .hero-section {
