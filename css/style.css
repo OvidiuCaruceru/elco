@@ -68,6 +68,10 @@ body {
     margin: 8rem 0 0 0;
 }
 
+.page__counter {
+
+}
+
 .bg-img--hero {
     background-image: url(../images/bg1.jpg);
     background-color: var(--filter-color-hero);
@@ -188,10 +192,6 @@ body {
     padding: 2rem 2rem .5rem 2rem;
 }
 
-.frame--subtitle {
-
-}
-
 .frame__text {
     font-size: var(--font-size-s);
     margin: var(--v-separator) 0 0 0;
@@ -228,6 +228,7 @@ body {
 
 .frame__text--medium {
     font-size: var(--font-size-m);
+    font-weight: var(--font-weight-bold);
     padding: 1.5rem 0;
 }
 
@@ -246,6 +247,11 @@ body {
 .frame__list-item {
     padding: 1rem 0;
 }
+
+.frame__list-item--first {
+    padding: 0 0 1rem 0;
+}
+
 
 .frame__list-item--last {
     padding: 1rem 0 0 0;
