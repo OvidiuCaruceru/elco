@@ -24,5 +24,5 @@ Pages:
 Acasa - done  
 Activitate - done  
 Portofoliu - done
-Cariere - pending
+Cariere - done
 Contact - pending
